@@ -7,7 +7,7 @@
   <title>Sekolah Laboratorium - UPI</title>
 
   <!-- PLUGINS CSS STYLE -->
-  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="icon" type="image/png" href="<?php echo base_url(); ?>assets/img/favicon.png">
   <link href="<?php echo base_url(); ?>plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="<?php echo base_url(); ?>plugins/selectbox/select_option1.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>plugins/font-awesome/css/font-awesome.min.css">
@@ -55,25 +55,25 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand logo clearfix" href="index.html"><img src="img/logo1.png" alt="" class="img-responsive" /></a>
+                    <a class="navbar-brand logo clearfix" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>assets/img/logo1.png" alt="" class="img-responsive" /></a>
                   </div>
 
                   <!-- Collect the nav links, forms, and other content for toggling -->
                   <div class="collapse navbar-collapse" id="main-nav">
                     <ul class="nav navbar-nav navbar-right">
                       <li class="active">
-                        <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Beranda</a>
+                        <a href="<?php echo base_url(); ?>">Beranda</a>
                       </li>
-					  <li class=" dropdown">
+					            <li class=" dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil</a>
                         <ul class="dropdown-menu">
-                          <li><a href="#">Sejarah</a></li>
-                          <li><a href="#">Visi & Misi</a></li>
+                          <li><a href="<?php echo base_url(); ?>sejarah">Sejarah</a></li>
+                          <li><a href="<?php echo base_url(); ?>visimisi">Visi & Misi</a></li>
                           <li><a href="#">Pengelola Sekolah</a></li>
                           <li><a href="#">Pimpinan Sekolah</a></li>
                         </ul>
                       </li>
-					  <li class=" dropdown">
+					            <li class=" dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jenjang Sekolah</a>
                         <ul class="dropdown-menu">
                           <li class=" dropdown">
@@ -108,13 +108,13 @@
                         </ul>
                       </li>
                       <li class="">
-                          <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Riset</a>
+                          <a href="#" >Riset</a>
                         </li>
                       <li class="">
-                          <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Galeri</a>
+                          <a href="#" >Galeri</a>
                         </li>
                       <li class="">
-                          <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kontak</a>
+                          <a href="<?php echo base_url(); ?>kontak" >Kontak</a>
                         </li>
                     </ul>
                   </div><!-- navbar-collapse -->

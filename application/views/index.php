@@ -3,23 +3,23 @@
     <div class="banner carousel slide" id="recommended-item-carousel" data-ride="carousel">
       <div class="slides carousel-inner">
         <div class="item active">
-          <a href="http://upi.edu"><img src="img/home/slider/slider_image_1.jpg" alt="" /></a>
+          <a href="http://upi.edu"><img src="<?php echo base_url(); ?>assets/img/home/slider/slider_image_1.jpg" alt="" /></a>
         </div>
         <div class="item">
-            <a href="http://upi.edu"><img src="img/home/slider/slider_image_2.jpg" alt="" /></a>
+            <a href="http://upi.edu"><img src="<?php echo base_url(); ?>assets/img/home/slider/slider_image_2.jpg" alt="" /></a>
         </div>
         <div class="item">
-            <a href="http://upi.edu"><img src="img/home/slider/slider_image_3.jpg" alt="" /></a>
+            <a href="http://upi.edu"><img src="<?php echo base_url(); ?>assets/img/home/slider/slider_image_3.jpg" alt="" /></a>
         </div>
         <div class="item">
-          <a href="http://upi.edu"><img src="img/home/slider/slider_image_4.jpg" alt="" /></a>
+          <a href="http://upi.edu"><img src="<?php echo base_url(); ?>assets/img/home/slider/slider_image_4.jpg" alt="" /></a>
       </div>
       </div>
       <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
-        <img src="img/home/slider/prev.png">
+        <img src="<?php echo base_url(); ?>assets/img/home/slider/prev.png">
         </a>
       <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
-        <img src="img/home/slider//next.png">
+        <img src="<?php echo base_url(); ?>assets/img/home/slider//next.png">
       </a>
     </div><!--end banner-->
     
@@ -30,47 +30,47 @@
             <div class="owl-carousel partnersLogoSlider">
               <div class="slide">
                 <div class="partnersLogo clearfix">
-                  <a href="#"><img src="img/logo-single.png" style="float:left;"/><h5 style="margin-top:15px;">TK Bumi Siliwangi</h5></a>
+                  <a href="#"><img src="<?php echo base_url(); ?>assets/img/logo-single.png" style="float:left;"/><h5 style="margin-top:15px;">TK Bumi Siliwangi</h5></a>
                 </div>
               </div>
               <div class="slide">
                 <div class="partnersLogo clearfix">
-                  <a href="#"><img src="img/logo-single.png" style="float:left;"/><h5 style="margin-top:15px;">SD Bumi Siliwangi</h5></a>
+                  <a href="#"><img src="<?php echo base_url(); ?>assets/img/logo-single.png" style="float:left;"/><h5 style="margin-top:15px;">SD Bumi Siliwangi</h5></a>
                 </div>
               </div>
               <div class="slide">
                 <div class="partnersLogo clearfix">
-                  <a href="#"><img src="img/logo-single.png" style="float:left;"/><h5 style="margin-top:15px;">SMP Bumi Siliwangi</h5></a>
+                  <a href="#"><img src="<?php echo base_url(); ?>assets/img/logo-single.png" style="float:left;"/><h5 style="margin-top:15px;">SMP Bumi Siliwangi</h5></a>
                 </div>
               </div>
               <div class="slide">
                 <div class="partnersLogo clearfix">
-                  <a href="#"><img src="img/logo-single.png" style="float:left;"/><h5 style="margin-top:15px;">SMA Bumi Siliwangi</h5></a>
+                  <a href="#"><img src="<?php echo base_url(); ?>assets/img/logo-single.png" style="float:left;"/><h5 style="margin-top:15px;">SMA Bumi Siliwangi</h5></a>
                 </div>
               </div>
               <div class="slide">
                 <div class="partnersLogo clearfix">
-                  <a href="#"><img src="img/logo-single.png" style="float:left;"/><h5 style="margin-top:15px;">TK Kampus Cibiru</h5></a>
+                  <a href="#"><img src="<?php echo base_url(); ?>assets/img/logo-single.png" style="float:left;"/><h5 style="margin-top:15px;">TK Kampus Cibiru</h5></a>
                 </div>
               </div>
               <div class="slide">
                 <div class="partnersLogo clearfix">
-                  <a href="#"><img src="img/logo-single.png" style="float:left;"/><h5 style="margin-top:15px;">SD Kampus Cibiru</h5></a>
+                  <a href="#"><img src="<?php echo base_url(); ?>assets/img/logo-single.png" style="float:left;"/><h5 style="margin-top:15px;">SD Kampus Cibiru</h5></a>
                 </div>
               </div>
               <div class="slide">
                   <div class="partnersLogo clearfix">
-                    <a href="#"><img src="img/logo-single.png" style="float:left;"/><h5 style="margin-top:15px;">SMP Kampus Cibiru</h5></a>
+                    <a href="#"><img src="<?php echo base_url(); ?>assets/img/logo-single.png" style="float:left;"/><h5 style="margin-top:15px;">SMP Kampus Cibiru</h5></a>
                   </div>
                 </div>
               <div class="slide">
                 <div class="partnersLogo clearfix">
-                  <a href="#"><img src="img/logo-single.png" style="float:left;"/><h5 style="margin-top:15px;">SD Kampus Tasik</h5></a>
+                  <a href="#"><img src="<?php echo base_url(); ?>assets/img/logo-single.png" style="float:left;"/><h5 style="margin-top:15px;">SD Kampus Tasik</h5></a>
                 </div>
               </div>
               <div class="slide">
                 <div class="partnersLogo clearfix">
-                  <a href="#"><img src="img/logo-single.png" style="float:left;"/><h5 style="margin-top:15px;">SD Kampus Serang</h5></a>
+                  <a href="#"><img src="<?php echo base_url(); ?>assets/img/logo-single.png" style="float:left;"/><h5 style="margin-top:15px;">SD Kampus Serang</h5></a>
                 </div>
               </div>
             </div>
@@ -89,7 +89,7 @@
                   </center>
                     <div class="col-md-4">
                       <div class="thumbnail news-item">
-                        <img src="img/news/berita-03.jpg" alt="img" class="img-responsive news-img">
+                        <img src="<?php echo base_url(); ?>assets/img/news/berita-03.jpg" alt="img" class="img-responsive news-img">
                         <div class="caption">
                           <h4 class="news-title">UPI Sosialisasikan Peraturan Rektor Tentang Standar Pelayanan Publik</h4>
                           <h5 class="news-date">27 September 2017</h5>
@@ -99,7 +99,7 @@
                     </div>
                     <div class="col-md-4">
                       <div class="thumbnail news-item">
-                        <img src="img/news/berita-02.jpg" alt="img" class="img-responsive news-img">
+                        <img src="<?php echo base_url(); ?>assets/img/news/berita-02.jpg" alt="img" class="img-responsive news-img">
                         <div class="caption">
                           <h4 class="news-title">Program Bakti Kampus Membuat UPI Kampus Serang Hijau</h4>
                           <h5 class="news-date">26 September 2017</h5>
@@ -109,7 +109,7 @@
                     </div>
                     <div class="col-md-4">
                       <div class="thumbnail news-item">
-                        <img src="img/news/berita-01.jpg" alt="img" class="img-responsive news-img">
+                        <img src="<?php echo base_url(); ?>assets/img/news/berita-01.jpg" alt="img" class="img-responsive news-img">
                         <div class="caption">
                           <h4 class="news-title">UPI Kampus Serang Resmikan SD Labschool</h4>
                           <h5 class="news-date">12 Mei 2017</h5>
@@ -188,7 +188,7 @@
       </div><!-- container -->
     </div><!-- mainContent -->
 
-    <div class="count clearfix wow fadeIn paralax" data-wow-delay="100ms" style="background-image: url(img/home/carousel.jpg);">
+    <div class="count clearfix wow fadeIn paralax" data-wow-delay="100ms" style="background-image: url(<?php echo base_url(); ?>assets/img/home/carousel.jpg);">
       <div class="container">
         <div class="row">
 		  <div class="col-xs-6 col-sm-3">
@@ -239,14 +239,14 @@
     <div class="testimonial-section clearfix">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 col-sm-6">
+          <div class="col-xs-12 col-sm-8">
             <div class="testimonial">
               <div class="carousal_content">
                 <p>Sekolah Laboratorium UPI merupakan sekolah ideal untuk putra-putri terbaik bangsa ini. Fasilitas modern, Tenaga Pengajar terbaik di bidangnya, Kurikulum terbaik.</p>
               </div>
               <div class="carousal_bottom">
                 <div class="thumb">
-                  <img src="img/about/SARA-LISBON_Art-Student.jpg" alt="" draggable="false">
+                  <img src="<?php echo base_url(); ?>assets/img/about/SARA-LISBON_Art-Student.jpg" alt="" draggable="false">
                 </div>
                 <div class="thumb_title">
                   <span class="author_name">Prof. Dr. Aim Abdulkarim, M.Pd.</span>
@@ -255,7 +255,7 @@
               </div>
             </div><!-- testimonial -->
           </div><!-- col-xs-12 -->
-          <div class="col-xs-12 col-sm-6">
+          <div class="col-xs-12 col-sm-4">
             <div class="features">
               <h3>Kenapa Memilih Kami?</h3>
               <ul>
