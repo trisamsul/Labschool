@@ -55,3 +55,6 @@ $route['translate_uri_dashes'] = FALSE;
 $route['sejarah'] = 'Home/sejarah';
 $route['visimisi'] = 'Home/visimisi';
 $route['kontak'] = 'Home/kontak';
+$route['galeri'] = 'Home/galeri';
+$route['pimpinan'] = 'Home/pimpinan';
+$route['riset'] = 'Home/riset';

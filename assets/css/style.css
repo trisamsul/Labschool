@@ -2724,7 +2724,7 @@ li.language.dropdown > a:hover, li.language.dropdown > a:focus {
 }
 
 .features {
-  padding-left: 30px;
+  padding-left: 0px;
 }
 
 @media (max-width: 767px) {
@@ -3350,6 +3350,13 @@ li.language.dropdown > a:hover, li.language.dropdown > a:focus {
   margin: 0;
 }
 
+.text-box-top ul li{
+  font-size: 16px;
+  line-height: 40px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
 .text-box:hover {
   background: white;
 }
@@ -3366,7 +3373,7 @@ li.language.dropdown > a:hover, li.language.dropdown > a:focus {
   color: rgba(0, 0, 0, 0.7);
 }
 
-.text-box:hover .text-box-top p {
+.text-box:hover .text-box-top p, .text-box:hover .text-box-top ul li{
   color: rgba(0, 0, 0, 0.7);
 }
 

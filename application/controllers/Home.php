@@ -49,4 +49,28 @@ class Home extends CI_Controller {
 		$this->load->view('kontak');
 		$this->load->view('layouts/footer.php');
 	}
+
+	//halaman galeri
+	public function galeri()
+	{
+		$this->load->view('layouts/header.php');
+		$this->load->view('galeri');
+		$this->load->view('layouts/footer.php');
+	}
+
+	//halaman pimpinan
+	public function pimpinan()
+	{
+		$this->load->view('layouts/header.php');
+		$this->load->view('pimpinan');
+		$this->load->view('layouts/footer.php');
+	}
+
+	//halaman riset
+	public function riset()
+	{
+		$this->load->view('layouts/header.php');
+		$this->load->view('riset');
+		$this->load->view('layouts/footer.php');
+	}
 }

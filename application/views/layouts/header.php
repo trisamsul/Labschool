@@ -69,8 +69,7 @@
                         <ul class="dropdown-menu">
                           <li><a href="<?php echo base_url(); ?>sejarah">Sejarah</a></li>
                           <li><a href="<?php echo base_url(); ?>visimisi">Visi & Misi</a></li>
-                          <li><a href="#">Pengelola Sekolah</a></li>
-                          <li><a href="#">Pimpinan Sekolah</a></li>
+                          <li><a href="<?php echo base_url(); ?>pimpinan">Pimpinan Sekolah</a></li>
                         </ul>
                       </li>
 					            <li class=" dropdown">
@@ -108,10 +107,10 @@
                         </ul>
                       </li>
                       <li class="">
-                          <a href="#" >Riset</a>
+                          <a href="<?php echo base_url(); ?>riset" >Riset</a>
                         </li>
                       <li class="">
-                          <a href="#" >Galeri</a>
+                          <a href="<?php echo base_url(); ?>galeri" >Galeri</a>
                         </li>
                       <li class="">
                           <a href="<?php echo base_url(); ?>kontak" >Kontak</a>
