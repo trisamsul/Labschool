@@ -21,56 +21,56 @@ class Home extends CI_Controller {
 	//halaman utama
 	 public function index()
 	{
-		$this->load->view('layouts/header.php');
+		$this->load->view('layouts/header');
 		$this->load->view('index');
-		$this->load->view('layouts/footer.php');
+		$this->load->view('layouts/footer');
 	}
 
 	//halaman sejarah
 	public function sejarah()
 	{
-		$this->load->view('layouts/header.php');
+		$this->load->view('layouts/header');
 		$this->load->view('sejarah');
-		$this->load->view('layouts/footer.php');
+		$this->load->view('layouts/footer');
 	}
 	
 	//halaman visimisi
 	public function visimisi()
 	{
-		$this->load->view('layouts/header.php');
+		$this->load->view('layouts/header');
 		$this->load->view('visimisi');
-		$this->load->view('layouts/footer.php');
+		$this->load->view('layouts/footer');
 	}
 
 	//halaman kontak
 	public function kontak()
 	{
-		$this->load->view('layouts/header.php');
+		$this->load->view('layouts/header');
 		$this->load->view('kontak');
-		$this->load->view('layouts/footer.php');
+		$this->load->view('layouts/footer');
 	}
-
+	
 	//halaman galeri
 	public function galeri()
 	{
-		$this->load->view('layouts/header.php');
+		$this->load->view('layouts/header');
 		$this->load->view('galeri');
-		$this->load->view('layouts/footer.php');
+		$this->load->view('layouts/footer');
 	}
 
 	//halaman pimpinan
-	public function pimpinan()
+	public function pengelola()
 	{
-		$this->load->view('layouts/header.php');
-		$this->load->view('pimpinan');
-		$this->load->view('layouts/footer.php');
+		$this->load->view('layouts/header');
+		$this->load->view('pengelola');
+		$this->load->view('layouts/footer');
 	}
 
 	//halaman riset
 	public function riset()
 	{
-		$this->load->view('layouts/header.php');
+		$this->load->view('layouts/header');
 		$this->load->view('riset');
-		$this->load->view('layouts/footer.php');
+		$this->load->view('layouts/footer');
 	}
 }

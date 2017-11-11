@@ -30,256 +30,76 @@
 
                     <div class="courses">
                         <table class="table table-bordered table-striped">
-                            <thead>
+                            <thead style="background-color: #C10E0E;">
                                 <tr>
-                                <th>Program Name</th>
-                                <th>Area Of Interest</th>
-                                <th>Duration</th>
-                                <th>Type</th>
-                                <th>Campus</th>
-
+                                <th>Judul Riset</th>
+                                <th>Bidang</th>
+                                <th>Penulis</th>
+                                <th>Tahun</th>
+                                <th>Download</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="option">
-                                <td>A</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
+                                <tr>
+                                    <td>Evaluasi Kurikulum Pendidikan</td>
+                                    <td>Pendidikan</td>
+                                    <td>Bambang Sutisna</td>
+                                    <td>2017</td>
+                                    <td><a href="#"><i class="fa fa-download" aria-hidden="true"> Download</i></a></td>
                                 </tr>
                                 <tr>
-                                <td>
-                                    <ul>
-                                        <li class="active">
-                                            <a href="single-course-right-sidebar.html">Architectural Technician (Weekend)</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-course-right-sidebar.html">Computers and Engineering</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-course-right-sidebar.html">Continuing Education</a>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>Engineering &amp; Architecture <br/>(Fulltime on campus)</td>
-                                <td>Fulltime <br/>on campus <br/>2 Years</td>
-                                <td>Ontario College<br/> Of Diploma</td>
-                                <td>Ottawa</td>
+                                    <td>Evaluasi Kurikulum Pendidikan</td>
+                                    <td>Pendidikan</td>
+                                    <td>Bambang Sutisna</td>
+                                    <td>2017</td>
+                                    <td><a href="#"><i class="fa fa-download" aria-hidden="true"> Download</i></a></td>
                                 </tr>
                                 <tr>
-                                <td>
-                                    <ul>
-                                        <li class="active">
-                                            <a href="single-course-right-sidebar.html">Architectural Technician (Weekend)</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-course-right-sidebar.html">Computers and Engineering</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-course-right-sidebar.html">Continuing Education</a>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>Engineering &amp; Architecture <br/>(Fulltime on campus)</td>
-                                <td>Fulltime <br/>on campus <br/>2 Years</td>
-                                <td>Ontario College<br/> Of Diploma</td>
-                                <td>Ottawa</td>
+                                    <td>Evaluasi Kurikulum Pendidikan</td>
+                                    <td>Pendidikan</td>
+                                    <td>Bambang Sutisna</td>
+                                    <td>2017</td>
+                                    <td><a href="#"><i class="fa fa-download" aria-hidden="true"> Download</i></a></td>
                                 </tr>
                                 <tr>
-                                <td>
-                                    <ul>
-                                        <li class="active">
-                                            <a href="single-course-right-sidebar.html">Architectural Technician (Weekend)</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-course-right-sidebar.html">Computers and Engineering</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-course-right-sidebar.html">Continuing Education</a>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>Engineering &amp; Architecture <br/>(Fulltime on campus)</td>
-                                <td>Fulltime <br/>on campus <br/>2 Years</td>
-                                <td>Ontario College<br/> Of Diploma</td>
-                                <td>Ottawa</td>
+                                    <td>Evaluasi Kurikulum Pendidikan</td>
+                                    <td>Pendidikan</td>
+                                    <td>Bambang Sutisna</td>
+                                    <td>2017</td>
+                                    <td><a href="#"><i class="fa fa-download" aria-hidden="true"> Download</i></a></td>
                                 </tr>
                                 <tr>
-                                <td>
-                                    <ul>
-                                        <li class="active">
-                                            <a href="single-course-right-sidebar.html">Architectural Technician (Weekend)</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-course-right-sidebar.html">Computers and Engineering</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-course-right-sidebar.html">Continuing Education</a>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>Engineering &amp; Architecture <br/>(Fulltime on campus)</td>
-                                <td>Fulltime <br/>on campus <br/>2 Years</td>
-                                <td>Ontario College<br/> Of Diploma</td>
-                                <td>Ottawa</td>
+                                    <td>Evaluasi Kurikulum Pendidikan</td>
+                                    <td>Pendidikan</td>
+                                    <td>Bambang Sutisna</td>
+                                    <td>2017</td>
+                                    <td><a href="#"><i class="fa fa-download" aria-hidden="true"> Download</i></a></td>
                                 </tr>
                                 <tr>
-                                <td>
-                                    <ul>
-                                        <li class="active">
-                                            <a href="single-course-right-sidebar.html">Architectural Technician (Weekend)</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-course-right-sidebar.html">Computers and Engineering</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-course-right-sidebar.html">Continuing Education</a>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>Engineering &amp; Architecture <br/>(Fulltime on campus)</td>
-                                <td>Fulltime <br/>on campus <br/>2 Years</td>
-                                <td>Ontario College<br/> Of Diploma</td>
-                                <td>Ottawa</td>
+                                    <td>Evaluasi Kurikulum Pendidikan</td>
+                                    <td>Pendidikan</td>
+                                    <td>Bambang Sutisna</td>
+                                    <td>2017</td>
+                                    <td><a href="#"><i class="fa fa-download" aria-hidden="true"> Download</i></a></td>
                                 </tr>
                                 <tr>
-                                <td>
-                                    <ul>
-                                        <li class="active">
-                                            <a href="single-course-right-sidebar.html">Architectural Technician (Weekend)</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-course-right-sidebar.html">Computers and Engineering</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-course-right-sidebar.html">Continuing Education</a>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>Engineering &amp; Architecture <br/>(Fulltime on campus)</td>
-                                <td>Fulltime <br/>on campus <br/>2 Years</td>
-                                <td>Ontario College<br/> Of Diploma</td>
-                                <td>Ottawa</td>
+                                    <td>Evaluasi Kurikulum Pendidikan</td>
+                                    <td>Pendidikan</td>
+                                    <td>Bambang Sutisna</td>
+                                    <td>2017</td>
+                                    <td><a href="#"><i class="fa fa-download" aria-hidden="true"> Download</i></a></td>
                                 </tr>
                                 <tr>
-                                <td>
-                                    <ul>
-                                        <li class="active">
-                                            <a href="single-course-right-sidebar.html">Architectural Technician (Weekend)</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-course-right-sidebar.html">Computers and Engineering</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-course-right-sidebar.html">Continuing Education</a>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>Engineering &amp; Architecture <br/>(Fulltime on campus)</td>
-                                <td>Fulltime <br/>on campus <br/>2 Years</td>
-                                <td>Ontario College<br/> Of Diploma</td>
-                                <td>Ottawa</td>
-                                </tr>
-                                <tr>
-                                <td>
-                                    <ul>
-                                        <li class="active">
-                                            <a href="single-course-right-sidebar.html">Architectural Technician (Weekend)</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-course-right-sidebar.html">Computers and Engineering</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-course-right-sidebar.html">Continuing Education</a>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>Engineering &amp; Architecture <br/>(Fulltime on campus)</td>
-                                <td>Fulltime <br/>on campus <br/>2 Years</td>
-                                <td>Ontario College<br/> Of Diploma</td>
-                                <td>Ottawa</td>
-                                </tr>
-                                <tr>
-                                <td>
-                                    <ul>
-                                        <li class="active">
-                                            <a href="single-course-right-sidebar.html">Architectural Technician (Weekend)</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-course-right-sidebar.html">Computers and Engineering</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-course-right-sidebar.html">Continuing Education</a>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>Engineering &amp; Architecture <br/>(Fulltime on campus)</td>
-                                <td>Fulltime <br/>on campus <br/>2 Years</td>
-                                <td>Ontario College<br/> Of Diploma</td>
-                                <td>Ottawa</td>
-                                </tr>
-                                <tr>
-                                <td>
-                                    <ul>
-                                        <li class="active">
-                                            <a href="single-course-right-sidebar.html">Architectural Technician (Weekend)</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-course-right-sidebar.html">Computers and Engineering</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-course-right-sidebar.html">Continuing Education</a>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>Engineering &amp; Architecture <br/>(Fulltime on campus)</td>
-                                <td>Fulltime <br/>on campus <br/>2 Years</td>
-                                <td>Ontario College<br/> Of Diploma</td>
-                                <td>Ottawa</td>
-                                </tr>
-                                <tr>
-                                <td>
-                                    <ul>
-                                        <li class="active">
-                                            <a href="single-course-right-sidebar.html">Architectural Technician (Weekend)</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-course-right-sidebar.html">Computers and Engineering</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-course-right-sidebar.html">Continuing Education</a>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>Engineering &amp; Architecture <br/>(Fulltime on campus)</td>
-                                <td>Fulltime <br/>on campus <br/>2 Years</td>
-                                <td>Ontario College<br/> Of Diploma</td>
-                                <td>Ottawa</td>
-                                </tr>
-                                <tr>
-                                <td>
-                                    <ul>
-                                        <li class="active">
-                                            <a href="single-course-right-sidebar.html">Architectural Technician (Weekend)</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-course-right-sidebar.html">Computers and Engineering</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-course-right-sidebar.html">Continuing Education</a>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>Engineering &amp; Architecture <br/>(Fulltime on campus)</td>
-                                <td>Fulltime <br/>on campus <br/>2 Years</td>
-                                <td>Ontario College<br/> Of Diploma</td>
-                                <td>Ottawa</td>
+                                    <td>Evaluasi Kurikulum Pendidikan</td>
+                                    <td>Pendidikan</td>
+                                    <td>Bambang Sutisna</td>
+                                    <td>2017</td>
+                                    <td><a href="#"><i class="fa fa-download" aria-hidden="true"> Download</i></a></td>
                                 </tr>
                             </tbody>
                             </table>
                     </div><!--End courses-->
-
+<!--                     
                     <ul class="pagination">
                         <li>
                             <a aria-label="Previous" href="#">
@@ -299,7 +119,7 @@
                             <span aria-hidden="true">Next</span>
                             </a>
                         </li>
-                    </ul>
+                    </ul> -->
 
                 </div><!-- end courses_right_inner -->
             </div><!-- end courses_right -->

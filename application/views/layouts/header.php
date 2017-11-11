@@ -69,7 +69,7 @@
                         <ul class="dropdown-menu">
                           <li><a href="<?php echo base_url(); ?>sejarah">Sejarah</a></li>
                           <li><a href="<?php echo base_url(); ?>visimisi">Visi & Misi</a></li>
-                          <li><a href="<?php echo base_url(); ?>pimpinan">Pimpinan Sekolah</a></li>
+                          <li><a href="<?php echo base_url(); ?>pengelola">Pengelola & Pimpinan Sekolah</a></li>
                         </ul>
                       </li>
 					            <li class=" dropdown">
