@@ -37,7 +37,29 @@ class Admin extends CI_Controller {
 	{
 		$this->load->view('admin/login');
     }
-    
+	
+	public function auth(){
+		$post = $this->input->post();
+		$data = $this->ModelAkun->check($post['uname'],md5($post['pass']))->row_array();
+		if(!isset($data)){
+			redirect('admin/login/failed');			
+		}else{
+			$userdata = array(
+				'username'  => $data['username'],
+				'fullname'  => $data['password'],
+				'log'  => $data['ll'],
+				'logged_in' => TRUE
+			);
+			$this->session->set_userdata($userdata);
+			redirect('Admin/');			
+		}
+	}
+
+	public function logOut(){
+		$this->session->sess_destroy();
+		redirect('');
+	}
+
     public function newsAll()
 	{
         $data['all'] = $this->ModelNews->selectAll()->result_array();		
@@ -57,9 +79,8 @@ class Admin extends CI_Controller {
 		// var_dump($this->input->post());
 		$data = $this->input->post();
 		// print_r(nl2br($data['teks']))
-		$data['tanggal'] = date('Y-m-d');
+		$data['berita_tanggal'] = date('Y-m-d');
 		unset($data['_wysihtml5_mode']);
-		$data['stats'] = 1;
 		// var_dump($data);
 
 		$config['upload_path']		= './uploads/berita/';
@@ -74,9 +95,9 @@ class Admin extends CI_Controller {
 			$error = array('error' => $this->upload->display_errors());
 			// var_dump($error);
 		} else{
-			$data['path'] = $config['file_name'].$this->upload->data('file_ext');
+			$data['berita_foto'] = $config['file_name'].$this->upload->data('file_ext');
 			$this->ModelNews->insert($data);
-			redirect('Admin/newsAll/Success');
+			redirect('admin/newsAll/Success');
 		}
 	}
 }

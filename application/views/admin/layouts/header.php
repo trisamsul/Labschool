@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Admin | LP2IT</title>
+  <title>Admin | Labschool</title>
   <link rel="icon" type="image/png" href="<?php echo base_url(); ?>assets/img/favicon.png">
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -118,54 +118,20 @@
       <ul class="sidebar-menu">
         <li class="header">MENU</li>
         <li class="treeview">
-          <a href="<?php echo site_url(); ?>Admin">
+          <a href="<?php echo base_url(); ?>admin">
             <i class="fa fa-home"></i> <span>Beranda</span></i>
           </a>
         </li>
-        <!--
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-files-o"></i>
-            <span>Layout Options</span>
-            <span class="label label-primary pull-right">4</span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-            <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-            <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-            <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="pages/widgets.html">
-            <i class="fa fa-th"></i> <span>Widgets</span>
-            <small class="label pull-right bg-green">new</small>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-pie-chart"></i>
-            <span>Statistik</span>
-            <i class="fa fa-angle-left pull-right"></i>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-            <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
-          </ul>
-        </li>
-        -->
         <li class="treeview">
           <a href="#">
               <i class="fa fa-newspaper-o"></i> <span>Berita</span>
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo site_url(); ?>Admin/newsAll"><i class="fa fa-th"></i> Semua Berita<span class="pull-right-container">
+            <li><a href="<?php echo base_url(); ?>admin/newsAll"><i class="fa fa-th"></i> Semua Berita<span class="pull-right-container">
               <span class="label label-warning pull-right">0</span>
             </span></a></li>
-            <li><a href="<?php echo site_url(); ?>Admin/newsPost"><i class="fa fa-edit"></i> Buat Berita</a></li>
+            <li><a href="<?php echo base_url(); ?>admin/newsPost"><i class="fa fa-edit"></i> Buat Berita</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -174,14 +140,14 @@
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo site_url(); ?>Admin/galeriAll"><i class="fa fa-th"></i> Semua Foto<span class="pull-right-container">
+            <li><a href="<?php echo base_url(); ?>admin/galeriAll"><i class="fa fa-th"></i> Semua Foto<span class="pull-right-container">
               <span class="label label-warning pull-right"><0</span>
             </span></a></li>
-            <li><a href="<?php echo site_url(); ?>Admin/addGaleri"><i class="fa fa-edit"></i> Buat Galeri</a></li>
+            <li><a href="<?php echo base_url(); ?>admin/addGaleri"><i class="fa fa-edit"></i> Buat Galeri</a></li>
           </ul>
         </li>                    
         <li class="treeview">
-          <a href="<?php echo site_url(); ?>Admin/kontakAll">
+          <a href="<?php echo base_url(); ?>admin/kontakAll">
             <i class="fa fa-envelope"></i> <span>Pesan</span></i>
             <span class="pull-right-container">
               <span class="label label-danger pull-right">0</span>

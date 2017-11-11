@@ -13,6 +13,11 @@
     </section>
   <!-- Main content -->
     <section class="content">
+      <?php if ($this->uri->segment(3) == "Success"){ ?>
+      <div class="alert alert-success" role="alert">
+        Berita berhasil diposting, silahkan cek pada daftar pelatihan dibawah ini.
+      </div>
+      <?php } ?>
       <div class="row">
         <div class="col-xs-12">
         <div class="box">
@@ -27,6 +32,7 @@
                     <th>No.</th>
                     <th>Judul Berita</th>
                     <th>Tanggal</th>
+                    <th>Foto</th>
                     <th>Aksi</th>
                 </tr>
                 </thead>
@@ -38,6 +44,7 @@
                     <td><?php echo $i++; ?></td>
                     <td><?php echo $row['berita_judul']; ?></td>
                     <td><?php echo $row['berita_tanggal']; ?></td>
+                    <td><a href="<?php echo base_url(); ?>uploads/berita/<?php echo $row['berita_foto']; ?>" target="_blank">Foto</a></td>
                     <td>
                       <button type="button" class="btn btn-sm bg-navy"><i class="fa fa-eye-slash"></i></button>
                       <button type="button" class="btn btn-sm bg-orange"><i class="fa fa-edit"></i></button>
@@ -51,6 +58,7 @@
                   <th>No.</th>
                   <th>Judul Berita</th>
                   <th>Tanggal</th>
+                  <th>Foto</th>
                   <th>Aksi</th>
                 </tr>
                 </tfoot>

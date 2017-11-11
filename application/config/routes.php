@@ -58,4 +58,3 @@ $route['kontak'] = 'Home/kontak';
 $route['galeri'] = 'Home/galeri';
 $route['pengelola'] = 'Home/pengelola';
 $route['riset'] = 'Home/riset';
-$route['Admin/barang/(:any)/Edit'] = 'Admin/viewEdit/$1';

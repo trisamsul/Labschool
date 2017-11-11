@@ -22,16 +22,10 @@
             <div class="box-body">
                 <?php echo form_open_multipart('Admin/addNews'); ?>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="judul" placeholder="Judul Berita" required>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="kategori" placeholder="Kategori" required>
-                </div>        
-                <div class="form-group">
-                  <input type="text" class="form-control" name="penulis" placeholder="Penulis" required>
+                  <input type="text" class="form-control" name="berita_judul" placeholder="Judul Berita" required>
                 </div>                        
-                <div>
-                  <textarea class="textarea" placeholder="Teks Berita" name="teks" style="width: 100%; height: 300px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" required></textarea>
+                <div class="form-group">
+                  <textarea class="textarea" placeholder="Teks Berita" name="berita_teks" style="width: 100%; height: 300px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" required></textarea>
                 </div>
                 <div class="form-group">
                   <label>Unggah Foto Utama : </label>

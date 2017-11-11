@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Labschool | Admin</title>
+  <title>Admin | Labschool</title>
   <link rel="icon" type="image/png" href="<?php echo base_url(); ?>assets/img/favicon.png">
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -44,7 +44,12 @@
   <!-- /.login-logo -->
   <div class="login-box-body">
     <p class="login-box-msg">Silahkan masuk menggunakan username dan password anda</p>
-    <form action="" method="post">
+    <?php if ($this->uri->segment(3) == "failed"){ ?>
+    <div class="alert alert-danger" role="alert">
+      Maaf username/password yang anda masukkan salah.
+    </div>
+    <?php } ?>
+    <form action="<?php echo base_url(); ?>Admin/auth" method="post">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" placeholder="Username" name="uname">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
