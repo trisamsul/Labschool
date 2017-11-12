@@ -57,4 +57,5 @@ $route['visimisi'] = 'Home/visimisi';
 $route['kontak'] = 'Home/kontak';
 $route['galeri'] = 'Home/galeri';
 $route['pengelola'] = 'Home/pengelola';
+$route['pimpinan'] = 'Home/pimpinan';
 $route['riset'] = 'Home/riset';

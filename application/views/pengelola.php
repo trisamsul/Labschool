@@ -5,7 +5,7 @@
 					<div class="col-xs-12">
 						<div class="custom_title">
                             <center>
-                                <h1>Pengelola & Pimpinan Sekolah</h1>
+                                <h1>Pengelola Sekolah</h1>
                                 <p>Struktur Pengelola Sekolah Labschool UPI</p>
                             </center>
 						</div><!--end custom_title-->
@@ -26,7 +26,7 @@
                 <div class="row">
 					<div class="col-xs-12">
                     <div class="custom_title">
-                        <h3>Pimpinan Sekolah</h3>
+                        <h3>Pengelola Sekolah</h3>
                     </div><!--end custom_title-->
                         <ul class="list">
                             <li class="col-md-4">

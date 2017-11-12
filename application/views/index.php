@@ -87,36 +87,22 @@
                     <h3>Berita Terkini</h3>
                     <hr style="width:200px; height: 3px; background-color:#C10E0E; margin-top: -20px;">
                   </center>
-                    <div class="col-md-4">
+                    <?php foreach($berita as $i){ ?>
+                    <div class="col-md-3">
                       <div class="thumbnail news-item">
-                        <img src="<?php echo base_url(); ?>assets/img/news/berita-03.jpg" alt="img" class="img-responsive news-img">
+                        <img src="<?php echo base_url(); ?>uploads/berita/<?php echo $i['berita_foto']; ?>" alt="img" class="img-responsive news-img">
                         <div class="caption">
-                          <h4 class="news-title">UPI Sosialisasikan Peraturan Rektor Tentang Standar Pelayanan Publik</h4>
-                          <h5 class="news-date">27 September 2017</h5>
-                          <p class="news-text">Peraturan Rektor ini adalah untuk meningkatkan kualitas tata kelola dan layanan publik di UPI yang berorientasi pada kebutuhan dan kepuasan masyarakat sebagai penerima layanan, di UPI salah satu contoh pengguna jasa layanannya adalah mahasiswa</p>
+                          <h4 class="news-title"><?php echo $i['berita_judul']; ?></h4>
+                          <?php 
+                            $tanggal = new DateTime($i['berita_tanggal']);
+                          ?>
+                          <h5 class="news-date"><?php echo $tanggal->format('d-M-Y'); ?></h5>
+                          <p class="news-text"><?php echo mb_strimwidth($i['berita_teks'], 0, 150, "...") ?></p>
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4">
-                      <div class="thumbnail news-item">
-                        <img src="<?php echo base_url(); ?>assets/img/news/berita-02.jpg" alt="img" class="img-responsive news-img">
-                        <div class="caption">
-                          <h4 class="news-title">Program Bakti Kampus Membuat UPI Kampus Serang Hijau</h4>
-                          <h5 class="news-date">26 September 2017</h5>
-                          <p class="news-text">Kehadiran tim penilai Kebersihan, Keindahan, dan Keamanan (K3) di UPI Kampus Serang diharapkan dapat memberikan semangat dan motivasi kepada seluruh sivitas akademika UPI Kampus Serang dalam rangka mengalakan K3.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="thumbnail news-item">
-                        <img src="<?php echo base_url(); ?>assets/img/news/berita-01.jpg" alt="img" class="img-responsive news-img">
-                        <div class="caption">
-                          <h4 class="news-title">UPI Kampus Serang Resmikan SD Labschool</h4>
-                          <h5 class="news-date">12 Mei 2017</h5>
-                          <p class="news-text">Wakil Rektor Bidang Perencanaan, Pengembangan, dan Sistem Informasi Universitas Pendidikan Indonesia Prof. Dr. Aim Abdulkarim, M.Pd., meresmikan Sekolah Dasar Laboratorium Percontohan (SD Labschool) UPI Kampus Serang</p>
-                        </div>
-                      </div>
-                    </div>
+                    <?php } ?>
+                    
                 </div><!--related_post_sec-->
   
           </div>

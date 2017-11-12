@@ -61,7 +61,7 @@
                   <!-- Collect the nav links, forms, and other content for toggling -->
                   <div class="collapse navbar-collapse" id="main-nav">
                     <ul class="nav navbar-nav navbar-right">
-                      <li class="active">
+                      <li class="">
                         <a href="<?php echo base_url(); ?>">Beranda</a>
                       </li>
 					            <li class=" dropdown">
@@ -69,7 +69,8 @@
                         <ul class="dropdown-menu">
                           <li><a href="<?php echo base_url(); ?>sejarah">Sejarah</a></li>
                           <li><a href="<?php echo base_url(); ?>visimisi">Visi & Misi</a></li>
-                          <li><a href="<?php echo base_url(); ?>pengelola">Pengelola & Pimpinan Sekolah</a></li>
+                          <li><a href="<?php echo base_url(); ?>pengelola">Pengelola Sekolah</a></li>
+                          <li><a href="<?php echo base_url(); ?>pimpinan">Pimpinan Sekolah</a></li>
                         </ul>
                       </li>
 					            <li class=" dropdown">

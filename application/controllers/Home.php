@@ -21,9 +21,10 @@ class Home extends CI_Controller {
 	//halaman utama
 	 public function index()
 	{
-		$this->load->view('layouts/header');
-		$this->load->view('index');
-		$this->load->view('layouts/footer');
+		$data['berita'] = $this->ModelNews->selectAll(4)->result_array();
+		$this->load->view('layouts/header',$data);
+		$this->load->view('index',$data);
+		$this->load->view('layouts/footer',$data);
 	}
 
 	//halaman sejarah
@@ -58,11 +59,19 @@ class Home extends CI_Controller {
 		$this->load->view('layouts/footer');
 	}
 
-	//halaman pimpinan
+	//halaman pengelola
 	public function pengelola()
 	{
 		$this->load->view('layouts/header');
 		$this->load->view('pengelola');
+		$this->load->view('layouts/footer');
+	}
+
+	//halaman pimpinan
+	public function pimpinan()
+	{
+		$this->load->view('layouts/header');
+		$this->load->view('pimpinan');
 		$this->load->view('layouts/footer');
 	}
 
