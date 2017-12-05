@@ -51,7 +51,7 @@ li.language.dropdown ul.dropdown-menu li a:hover {
 .feature-section .commonBtn.secondaryBtn:focus,
 .cartListInner .updateArea .btn,
 .cartListInner .updateArea .btn:hover {
-  border-color: #c81b1b;
+  border-color: #222c34;
 }
 
 .single_content .tab_menu > ul li.active a::after,
@@ -88,7 +88,7 @@ li.language.dropdown ul.dropdown-menu li a:hover {
 .feature-section .commonBtn.secondaryBtn,
 .cartListInner .updateArea .btn,
 .cartListInner .updateArea .btn:hover {
-  background-color: #c81b1b;
+  background-color: #222c34;
 }
 
 @media (max-width: 767px) {

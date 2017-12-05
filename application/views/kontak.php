@@ -4,15 +4,20 @@
 				<div class="row">
 					<div class="col-xs-12 col-sm-8 custom_right">
 						<div class="single_content_left">
+							<?php if ($this->uri->segment(2) == "Success"){ ?>
+								<div class="alert alert-success" role="alert">
+									<p style="font-size: 12px;">Terimakasih. Pesan anda telah disampaikan kepada Badan Pengelola Sekolah Labschool.</p>
+								</div>
+							<?php } ?>
 							<h3>Formulir Kontak</h3>
 							<p>Jika ada pertanyaan mengenai kami, silahkan isi data dibawah ini.</p>
 							<div class="contact_form">
-								<form method="post" action="#">
+								<?php echo form_open('Home/addPesan'); ?>
 									<div class="row">
 										<div class="col-xs-12 col-sm-7">
 											<div class="form-group">
 												<label>Nama <span class="error">*</span></label>
-												<input type="text" class="form-control" name="name">
+												<input type="text" class="form-control" name="kontak_nama">
 											</div>
 										</div>
 									</div><!--end row-->
@@ -20,7 +25,7 @@
 										<div class="col-xs-12 col-sm-7">
 											<div class="form-group">
 												<label>Email <span class="error">*</span></label>
-												<input type="text" class="form-control" name="email">
+												<input type="text" class="form-control" name="kontak_email">
 											</div>
 										</div>
 									</div><!--end row-->
@@ -28,7 +33,7 @@
 										<div class="col-xs-12 col-sm-11">
 											<div class="form-group">
 												<label>Pesan <span class="error">*</span></label>
-												<textarea class="form-control" cols="10" rows="9"></textarea>
+												<textarea class="form-control" cols="10" rows="9" name="kontak_pesan"></textarea>
 											</div>
 										</div>
 									</div><!--end row-->

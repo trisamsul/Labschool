@@ -38,7 +38,19 @@
   <div class="main_wrapper">
 
     <header class="header-wrapper">
-     
+    <div class="topbar clearfix">
+        <div class="container">
+          <ul class="topbar-left">
+            <li class="phoneNo"><i class="fa fa-phone"></i>022-2013342</li>
+            <li class="email-id hidden-xs hidden-sm"><i class="fa fa-envelope"></i>
+              <a href="mailto:info@yourdomain.com">bpslabschoolupi@gmail.com</a>
+            </li>
+          </ul>
+          <ul class="topbar-right">
+            <li style="margin-right: 20px;"><a href="<?php echo base_url(); ?>admin/login" >Login <i class="fa fa-sign-in"></i></a></li>
+          </ul>
+        </div>
+      </div>
 
       <div class="header clearfix" style="background-color: #C10E0E;">
         <nav class="navbar navbar-main navbar-default">
@@ -107,6 +119,9 @@
                           </li>
                         </ul>
                       </li>
+                      <li class="">
+                          <a href="<?php echo base_url(); ?>berita" >Berita</a>
+                        </li>
                       <li class="">
                           <a href="<?php echo base_url(); ?>riset" >Riset</a>
                         </li>

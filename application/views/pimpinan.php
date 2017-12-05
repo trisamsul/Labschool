@@ -6,7 +6,6 @@
 						<div class="custom_title">
                             <center>
                                 <h1>Pimpinan Sekolah</h1>
-                                <p>Struktur Pimpinan Sekolah Labschool UPI</p>
                             </center>
 						</div><!--end custom_title-->
 					</div><!--end col-xs-12-->
@@ -35,7 +34,7 @@
                         <ul class="list">
                             <li class="col-md-4">
                                 <div class="thumb">
-                                    <center><img src="<?php echo base_url(); ?>assets/img/labschool/blank.png" alt="" class="img-circle img-responsive"/></center>
+                                    <center><img src="<?php echo base_url(); ?>assets/img/labschool/leli.jpg" alt="" class="img-circle img-responsive"/></center>
                                 </div>
                                 <h3>Dr. Phill. Leli Kurniawati, S.Pd., M.Mus. </h3>
                                 <h5>Kepala Sekolah TK Bumi Siliwangi</h5>
@@ -51,7 +50,7 @@
                         <ul class="list">
                             <li class="col-md-4">
                                 <div class="thumb">
-                                    <center><img src="<?php echo base_url(); ?>assets/img/labschool/blank.png" alt="" class="img-circle img-responsive"/></center>
+                                    <center><img src="<?php echo base_url(); ?>assets/img/labschool/andi-utama.jpg" alt="" class="img-circle img-responsive"/></center>
                                 </div>
                                 <h3>Andi Utama. S.Pd., M.Pd. </h3>
                                 <h5>Kepala Sekolah SD Kampus Tasikmalaya</h5>
@@ -113,7 +112,7 @@
                         <ul class="list">
                             <li class="col-md-4">
                                 <div class="thumb">
-                                    <center><img src="<?php echo base_url(); ?>assets/img/labschool/blank.png" alt="" class="img-circle img-responsive"/></center>
+                                    <center><img src="<?php echo base_url(); ?>assets/img/labschool/imam.jpg" alt="" class="img-circle img-responsive"/></center>
                                 </div>
                                 <h3>Moch. Imam Mutaqin, S.Pd. </h3>
                                 <h5>Kepala Sekolah SD Bumi Siliwangi</h5>
@@ -143,7 +142,7 @@
                         <ul class="list">
                         <li class="col-md-4">
                                 <div class="thumb">
-                                    <center><img src="<?php echo base_url(); ?>assets/img/labschool/blank.png" alt="" class="img-circle img-responsive"/></center>
+                                    <center><img src="<?php echo base_url(); ?>assets/img/labschool/ayi.jpg" alt="" class="img-circle img-responsive"/></center>
                                 </div>
                                 <h3>Ayi Jaja Jamaludin, S.Pd. </h3>
                                 <h5>Kepala Sekolah SMP Kampus Cibiru</h5>
@@ -217,7 +216,7 @@
                         <ul class="list">
                             <li class="col-md-4">
                                 <div class="thumb">
-                                    <center><img src="<?php echo base_url(); ?>assets/img/labschool/blank.png" alt="" class="img-circle img-responsive"/></center>
+                                    <center><img src="<?php echo base_url(); ?>assets/img/labschool/deni.jpg" alt="" class="img-circle img-responsive"/></center>
                                 </div>
                                 <h3>Dr. Deni Kadarsah , M.Pd. </h3>
                                 <h5>Kepala Sekolah SMA Bumi Siliwangi</h5>

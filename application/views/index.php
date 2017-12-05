@@ -3,16 +3,16 @@
     <div class="banner carousel slide" id="recommended-item-carousel" data-ride="carousel">
       <div class="slides carousel-inner">
         <div class="item active">
-          <a href="http://upi.edu"><img src="<?php echo base_url(); ?>assets/img/home/slider/slider_image_1.jpg" alt="" /></a>
+          <a href="http://upi.edu" target="_blank"><img src="<?php echo base_url(); ?>assets/img/home/slider/slider_image_1.jpg" alt="" /></a>
         </div>
         <div class="item">
-            <a href="http://upi.edu"><img src="<?php echo base_url(); ?>assets/img/home/slider/slider_image_2.jpg" alt="" /></a>
+            <a href="http://upi.edu" target="_blank"><img src="<?php echo base_url(); ?>assets/img/home/slider/slider_image_2.jpg" alt="" /></a>
         </div>
         <div class="item">
-            <a href="http://upi.edu"><img src="<?php echo base_url(); ?>assets/img/home/slider/slider_image_3.jpg" alt="" /></a>
+            <a href="http://upi.edu" target="_blank"><img src="<?php echo base_url(); ?>assets/img/home/slider/slider_image_3.jpg" alt="" /></a>
         </div>
         <div class="item">
-          <a href="http://upi.edu"><img src="<?php echo base_url(); ?>assets/img/home/slider/slider_image_4.jpg" alt="" /></a>
+          <a href="http://upi.edu" target="_blank"><img src="<?php echo base_url(); ?>assets/img/home/slider/slider_image_4.jpg" alt="" /></a>
       </div>
       </div>
       <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
@@ -98,6 +98,8 @@
                           ?>
                           <h5 class="news-date"><?php echo $tanggal->format('d-M-Y'); ?></h5>
                           <p class="news-text"><?php echo mb_strimwidth($i['berita_teks'], 0, 150, "...") ?></p>
+                          <br>
+                          <a href="<?php echo base_url(); ?>berita/view/<?php echo $i['berita_id']; ?>" class="btn btn-default btn-block commonBtn">Selengkapnya</a>
                         </div>
                       </div>
                     </div>
@@ -165,7 +167,7 @@
                     </div>
                   </li>
                 </ul>
-                <a href="#" class="btn btn-default btn-block commonBtn">Selengkapnya</a>
+                <!-- <a href="#" class="btn btn-default btn-block commonBtn">Selengkapnya</a> -->
               </div>
             </div><!-- end list_block -->
           </div><!-- col-sm-4 col-xs-12 -->

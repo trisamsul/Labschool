@@ -22,9 +22,9 @@ class Home extends CI_Controller {
 	 public function index()
 	{
 		$data['berita'] = $this->ModelNews->selectAll(4)->result_array();
-		$this->load->view('layouts/header',$data);
+		$this->load->view('layouts/header');
 		$this->load->view('index',$data);
-		$this->load->view('layouts/footer',$data);
+		$this->load->view('layouts/footer');
 	}
 
 	//halaman sejarah
@@ -50,12 +50,21 @@ class Home extends CI_Controller {
 		$this->load->view('kontak');
 		$this->load->view('layouts/footer');
 	}
+
+	public function addPesan(){
+		$insert = $this->input->post();
+		$insert['kontak_tanggal'] = date('Y-m-d');
+		// var_dump($insert);
+		$this->ModelKontak->insert($insert);
+		redirect('kontak/Success');
+	}
 	
 	//halaman galeri
 	public function galeri()
 	{
+		$data['galeri'] = $this->ModelGaleri->selectAll()->result_array();
 		$this->load->view('layouts/header');
-		$this->load->view('galeri');
+		$this->load->view('galeri',$data);
 		$this->load->view('layouts/footer');
 	}
 
@@ -78,8 +87,9 @@ class Home extends CI_Controller {
 	//halaman riset
 	public function riset()
 	{
+		$data['riset'] = $this->ModelRiset->selectAll()->result_array();
 		$this->load->view('layouts/header');
-		$this->load->view('riset');
+		$this->load->view('riset',$data);
 		$this->load->view('layouts/footer');
 	}
 }

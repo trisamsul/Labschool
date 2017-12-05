@@ -9,27 +9,14 @@
                         <form action="#" method="post">
                             <ul>
                                 <li>
-                                    <input type="text" name="course-name" class="form-control" placeholder="Pencarian...">
-                                </li>
-                                <li>
-                                    <div class="selectBox clearfix">
-                                        <select name="guiest_id2" id="guiest_id2">
-                                            <option value="0">Semua</option>
-                                            <option value="1">Judul</option>
-                                            <option value="2">Tahun</option>
-                                            <option value="3">Penulis</option>
-                                        </select>
-                                    </div><!-- selectBox -->
-                                </li>
-                                <li class="search_button">
-                                    <button class="btn btn-default commonBtn" style="padding: 0px 15px;" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                    <input type="text" id="myInput" onkeyup="myFunction()" name="course-name" class="form-control" placeholder="Pencarian...">
                                 </li>
                             </ul>
                         </form>
                     </div><!--End search_section-->
 
-                    <div class="courses">
-                        <table class="table table-bordered table-striped">
+                    <div class="courses table-responsive">
+                        <table id="myTable" class="table table-bordered table-striped">
                             <thead style="background-color: #C10E0E;">
                                 <tr>
                                 <th>Judul Riset</th>
@@ -37,65 +24,20 @@
                                 <th>Penulis</th>
                                 <th>Tahun</th>
                                 <th>Download</th>
+                                <th>Video</th>
                                 </tr>
                             </thead>
                             <tbody>
+                            <?php foreach($riset as $i){ ?>
                                 <tr>
-                                    <td>Evaluasi Kurikulum Pendidikan</td>
-                                    <td>Pendidikan</td>
-                                    <td>Bambang Sutisna</td>
-                                    <td>2017</td>
-                                    <td><a href="#"><i class="fa fa-download" aria-hidden="true"> Download</i></a></td>
+                                    <td><?php echo $i['riset_judul']; ?></td>
+                                    <td><?php echo $i['riset_bidang']; ?></td>
+                                    <td><?php echo $i['riset_penulis']; ?></td>
+                                    <td><?php echo $i['riset_tahun']; ?></td>
+                                    <td><a href="<?php echo base_url(); ?>uploads/riset/files/<?php echo $i['riset_file']; ?>"><i class="fa fa-download" aria-hidden="true"> Download</i></a></td>
+                                    <td><a href="<?php echo base_url(); ?>uploads/riset/videos/<?php echo $i['riset_video']; ?>"><i class="fa fa-download" aria-hidden="true"> Download</i></a></td>
                                 </tr>
-                                <tr>
-                                    <td>Evaluasi Kurikulum Pendidikan</td>
-                                    <td>Pendidikan</td>
-                                    <td>Bambang Sutisna</td>
-                                    <td>2017</td>
-                                    <td><a href="#"><i class="fa fa-download" aria-hidden="true"> Download</i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Evaluasi Kurikulum Pendidikan</td>
-                                    <td>Pendidikan</td>
-                                    <td>Bambang Sutisna</td>
-                                    <td>2017</td>
-                                    <td><a href="#"><i class="fa fa-download" aria-hidden="true"> Download</i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Evaluasi Kurikulum Pendidikan</td>
-                                    <td>Pendidikan</td>
-                                    <td>Bambang Sutisna</td>
-                                    <td>2017</td>
-                                    <td><a href="#"><i class="fa fa-download" aria-hidden="true"> Download</i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Evaluasi Kurikulum Pendidikan</td>
-                                    <td>Pendidikan</td>
-                                    <td>Bambang Sutisna</td>
-                                    <td>2017</td>
-                                    <td><a href="#"><i class="fa fa-download" aria-hidden="true"> Download</i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Evaluasi Kurikulum Pendidikan</td>
-                                    <td>Pendidikan</td>
-                                    <td>Bambang Sutisna</td>
-                                    <td>2017</td>
-                                    <td><a href="#"><i class="fa fa-download" aria-hidden="true"> Download</i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Evaluasi Kurikulum Pendidikan</td>
-                                    <td>Pendidikan</td>
-                                    <td>Bambang Sutisna</td>
-                                    <td>2017</td>
-                                    <td><a href="#"><i class="fa fa-download" aria-hidden="true"> Download</i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Evaluasi Kurikulum Pendidikan</td>
-                                    <td>Pendidikan</td>
-                                    <td>Bambang Sutisna</td>
-                                    <td>2017</td>
-                                    <td><a href="#"><i class="fa fa-download" aria-hidden="true"> Download</i></a></td>
-                                </tr>
+                            <?php } ?>
                             </tbody>
                             </table>
                     </div><!--End courses-->
@@ -127,3 +69,23 @@
         </div><!-- end row -->
     </div><!-- end container -->
 </div><!--end post section-->
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>

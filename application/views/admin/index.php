@@ -20,12 +20,11 @@
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
-              <h3>5</h3>
-
-              <p>Pelatihan</p>
+              <h3><?php echo $berita; ?></h3>
+              <p>Berita</p>
             </div>
             <div class="icon">
-              <i class="fa fa-laptop"></i>
+              <i class="fa fa-newspaper-o"></i>
             </div>
             <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -35,12 +34,12 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>3</h3>
+              <h3><?php echo $riset; ?></h3>
 
-              <p>Galeri Foto</p>
+              <p>Riset</p>
             </div>
             <div class="icon">
-              <i class="fa fa-picture-o"></i>
+              <i class="fa fa-file-text-o"></i>
             </div>
             <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -50,12 +49,12 @@
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>6</h3>
+              <h3><?php echo $galeri_image + $galeri_video; ?></h3>
 
-              <p>Berita</p>
+              <p>Galeri</p>
             </div>
             <div class="icon">
-              <i class="fa fa-newspaper-o"></i>
+              <i class="fa fa-picture-o"></i>
             </div>
             <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>

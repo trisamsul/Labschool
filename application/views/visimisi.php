@@ -1,4 +1,4 @@
-	<!-- COURSE CATEGORY -->
+﻿	<!-- COURSE CATEGORY -->
     <section class="courseCategory padding paralax" style="background-image: url(<?php echo base_url(); ?>assets/img/home/carousel.jpg);">
       <div class="container">
         <div class="sectionTitle text-center">
@@ -13,7 +13,7 @@
               </div>
               <div class="text-box-top">
                 <h4><a href="">Visi</a></h4>
-                <a class="courseNo" href="">Labscool UPI</a>
+                <a class="courseNo" href="">Labschool UPI</a>
                 <div class="" style="background: none; border: none;">
 					<p style="font-size: 24px;line-height: 40px; text-align: center; font-family: 'Cambria'"><b><i>“ Sekolah Laboratorium Percontohan UPI terdepan dalam inovasi, layanan pendidikan, dan pembelajaran Tingkat Nasional dan Regional tahun 2025 ”</i></b></p>
 				</div>
@@ -28,7 +28,7 @@
               </div>
               <div class="text-box-top">
                 <h4><a href="">Misi</a></h4>
-				<a class="courseNo" href="">Labschool</a>
+				<a class="courseNo" href="">Labschool UPI</a>
 				<div class="features">
 				  <ul style=" font-family: 'Cambria">
 					<li><i class="fa fa-check-circle-o" style="margin-top: 5px;"></i>Mengembangkan sekolah percontohan dalam mengimplementasikan standar nasional dan/atau standar internasional.</li>

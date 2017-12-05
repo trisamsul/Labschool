@@ -3,26 +3,26 @@
   <div class="content-wrapper">
     <section class="content-header">
       <h1>
-        Berita
-        <small>Semua Berita</small>
+        Galeri
+        <small>Semua Foto & Video</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-book"></i> Berita</a></li>
-        <li class="active">Semua Berita</li>
+        <li><a href="#"><i class="fa fa-book"></i> Galeri</a></li>
+        <li class="active">Semua Galeri</li>
       </ol>
     </section>
   <!-- Main content -->
     <section class="content">
       <?php if ($this->uri->segment(3) == "Success"){ ?>
       <div class="alert alert-success" role="alert">
-        Berita berhasil diposting, silahkan cek pada daftar berita dibawah ini.
+        Foto atau video Berhasil diposting, silahkan cek pada daftar dibawah ini.
       </div>
       <?php } ?>
       <div class="row">
         <div class="col-xs-12">
         <div class="box">
             <div class="box-header">
-            <h3 class="box-title">Daftar Berita</h3>
+            <h3 class="box-title">Daftar Foto & Video</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -30,9 +30,9 @@
                 <thead>
                 <tr>
                     <th>No.</th>
-                    <th>Judul Berita</th>
-                    <th>Tanggal</th>
-                    <th>Foto</th>
+                    <th>Kategori</th>
+                    <th>File</th>
+                    <th>Caption</th>
                     <th>Aksi</th>
                 </tr>
                 </thead>
@@ -42,11 +42,21 @@
                  ?>
                 <tr >
                     <td><?php echo $i++; ?></td>
-                    <td><?php echo $row['berita_judul']; ?></td>
-                    <td><?php echo $row['berita_tanggal']; ?></td>
-                    <td><a href="<?php echo base_url(); ?>uploads/berita/<?php echo $row['berita_foto']; ?>" target="_blank">Foto</a></td>
+                    <?php
+                        $cat="";
+                        $path="";
+                        if($row['galeri_kategori'] == 0){
+                            $cat = "Gambar";
+                            $path = "images";
+                        }else{
+                            $cat = "Video";
+                            $path = "videos";
+                        }
+                    ?>
+                    <td><?php echo $cat; ?></td>
+                    <td><a href="<?php echo base_url(); ?>uploads/galeri/<?php echo $path; ?>/<?php echo $row['galeri_file']; ?>" target="_blank"><?php echo $row['galeri_file']; ?></a></td>
+                    <td><?php echo $row['galeri_caption']; ?></td>
                     <td>
-                      <button type="button" class="btn btn-sm bg-navy"><i class="fa fa-eye-slash"></i></button>
                       <button type="button" class="btn btn-sm bg-orange"><i class="fa fa-edit"></i></button>
                       <button type="button" class="btn btn-sm bg-red"><i class="fa fa-times"></i></button>
                     </td>
@@ -55,11 +65,11 @@
                 </tbody>
                 <tfoot>
                 <tr>
-                  <th>No.</th>
-                  <th>Judul Berita</th>
-                  <th>Tanggal</th>
-                  <th>Foto</th>
-                  <th>Aksi</th>
+                    <th>No.</th>
+                    <th>Kategori</th>
+                    <th>File</th>
+                    <th>Caption</th>
+                    <th>Aksi</th>
                 </tr>
                 </tfoot>
             </table>

@@ -22,14 +22,20 @@ class Admin extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->head['berita'] = $this->ModelNews->selectAll()->num_rows();
+		$this->head['riset'] = $this->ModelRiset->selectAll()->num_rows();
+		$this->head['galeri'] = $this->ModelGaleri->selectAll()->num_rows();
+		$this->head['pesan'] = $this->ModelKontak->selectAll()->num_rows();
 	}
     
      //halaman utama
 	public function index()
 	{
         $count['berita'] = $this->ModelNews->selectAll()->num_rows();
-        $this->load->view('admin/layouts/header');
-		$this->load->view('admin/index');
+        $count['riset'] = $this->ModelRiset->selectAll()->num_rows();
+        $count['galeri_image'] = $this->ModelGaleri->selectImages()->num_rows();
+        $count['galeri_video'] = $this->ModelGaleri->selectVideos()->num_rows();
+        $this->load->view('admin/layouts/header',$this->head);
+		$this->load->view('admin/index',$count);
 		$this->load->view('admin/layouts/footer');
     }
     
@@ -99,5 +105,127 @@ class Admin extends CI_Controller {
 			$this->ModelNews->insert($data);
 			redirect('admin/newsAll/Success');
 		}
+	}
+
+	public function galeriAll()
+	{
+        $data['all'] = $this->ModelGaleri->selectAll()->result_array();		
+		$this->load->view('admin/layouts/header',$this->head);
+		$this->load->view('admin/galeriAll',$data);
+		$this->load->view('admin/layouts/footer');
+	}
+	
+	public function galeriPostImg()
+	{
+		$this->load->view('admin/layouts/header',$this->head);
+		$this->load->view('admin/galeriPostImg');
+		$this->load->view('admin/layouts/footer');
+	}
+
+	public function galeriPostVid()
+	{
+		$this->load->view('admin/layouts/header',$this->head);
+		$this->load->view('admin/galeriPostVid');
+		$this->load->view('admin/layouts/footer');
+	}
+	
+	public function addImage(){
+		// var_dump($this->input->post());
+		$data = $this->input->post();
+		// print_r(nl2br($data['teks']))
+		unset($data['_wysihtml5_mode']);
+		// var_dump($data);
+
+		$config['upload_path']		= './uploads/galeri/images/';
+		$config['allowed_types']	= '*';
+		$config['max_size']			= 0;				
+		date_default_timezone_set("Asia/Bangkok");
+		$config['file_name']		= "IMG_".time();
+		$this->load->library('upload', $config);
+		var_dump($_FILES);
+		if(!$this->upload->do_upload('photo')){
+			//gagal
+			$error = array('error' => $this->upload->display_errors());
+			// var_dump($error);
+		} else{
+			$data['galeri_file'] = $config['file_name'].$this->upload->data('file_ext');
+			$data['galeri_kategori'] = 0;
+			$this->ModelGaleri->insert($data);
+			redirect('admin/galeriAll/Success');
+		}
+	}
+
+	public function addVideo(){
+		// var_dump($this->input->post());
+		$data = $this->input->post();
+		// print_r(nl2br($data['teks']))
+		unset($data['_wysihtml5_mode']);
+		// var_dump($data);
+
+		$config['upload_path']		= './uploads/galeri/videos/';
+		$config['allowed_types']	= '*';
+		$config['max_size']			= 0;				
+		date_default_timezone_set("Asia/Bangkok");
+		$config['file_name']		= "VID_".time();
+		$this->load->library('upload', $config);
+		var_dump($_FILES);
+		if(!$this->upload->do_upload('video')){
+			//gagal
+			$error = array('error' => $this->upload->display_errors());
+			// var_dump($error);
+		} else{
+			$data['galeri_file'] = $config['file_name'].$this->upload->data('file_ext');
+			$data['galeri_kategori'] = 1;
+			$this->ModelGaleri->insert($data);
+			redirect('admin/galeriAll/Success');
+		}
+	}
+
+	public function risetAll()
+	{
+        $data['all'] = $this->ModelRiset->selectAll()->result_array();		
+		$this->load->view('admin/layouts/header',$this->head);
+		$this->load->view('admin/risetAll',$data);
+		$this->load->view('admin/layouts/footer');
+	}
+
+	public function risetPost()
+	{
+		$this->load->view('admin/layouts/header',$this->head);
+		$this->load->view('admin/risetPost');
+		$this->load->view('admin/layouts/footer');
+	}
+
+	public function addRiset(){
+		// var_dump($this->input->post());
+		$data = $this->input->post();
+		// print_r(nl2br($data['teks']))
+		unset($data['_wysihtml5_mode']);
+		// var_dump($data);
+
+		$config['upload_path']		= './uploads/riset/files/';
+		$config['allowed_types']	= '*';
+		$config['max_size']			= 0;				
+		date_default_timezone_set("Asia/Bangkok");
+		$config['file_name']		= "RISET_".time();
+		$this->load->library('upload', $config);
+		var_dump($_FILES);
+		if(!$this->upload->do_upload('file')){
+			//gagal
+			$error = array('error' => $this->upload->display_errors());
+			// var_dump($error);
+		} else{
+			$data['riset_file'] = $config['file_name'].$this->upload->data('file_ext');
+			$this->ModelRiset->insert($data);
+			redirect('admin/risetAll/Success');
+		}
+	}
+
+	public function pesanAll()
+	{
+        $data['all'] = $this->ModelKontak->selectAll()->result_array();		
+		$this->load->view('admin/layouts/header',$this->head);
+		$this->load->view('admin/pesanAll',$data);
+		$this->load->view('admin/layouts/footer');
 	}
 }

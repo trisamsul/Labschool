@@ -129,7 +129,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="<?php echo base_url(); ?>admin/newsAll"><i class="fa fa-th"></i> Semua Berita<span class="pull-right-container">
-              <span class="label label-warning pull-right">0</span>
+              <span class="label label-warning pull-right"><?php echo $berita; ?></span>
             </span></a></li>
             <li><a href="<?php echo base_url(); ?>admin/newsPost"><i class="fa fa-edit"></i> Buat Berita</a></li>
           </ul>
@@ -140,17 +140,30 @@
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>admin/galeriAll"><i class="fa fa-th"></i> Semua Foto<span class="pull-right-container">
-              <span class="label label-warning pull-right"><0</span>
+            <li><a href="<?php echo base_url(); ?>admin/galeriAll"><i class="fa fa-th"></i> Semua Foto & Video<span class="pull-right-container">
+              <span class="label label-warning pull-right"><?php echo $galeri; ?></span>
             </span></a></li>
-            <li><a href="<?php echo base_url(); ?>admin/addGaleri"><i class="fa fa-edit"></i> Buat Galeri</a></li>
+            <li><a href="<?php echo base_url(); ?>admin/galeriPostImg"><i class="fa fa-edit"></i> Unggah Foto</a></li>
+            <li><a href="<?php echo base_url(); ?>admin/galeriPostVid"><i class="fa fa-edit"></i> Unggah Video</a></li>
           </ul>
-        </li>                    
+        </li>
         <li class="treeview">
-          <a href="<?php echo base_url(); ?>admin/kontakAll">
+          <a href="#">
+              <i class="fa fa-file-text-o"></i> <span>Riset</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url(); ?>admin/risetAll"><i class="fa fa-th"></i> Semua Riset<span class="pull-right-container">
+              <span class="label label-warning pull-right"><?php echo $riset; ?></span>
+            </span></a></li>
+            <li><a href="<?php echo base_url(); ?>admin/risetPost"><i class="fa fa-edit"></i> Unggah Riset</a></li>
+          </ul>
+        </li>                      
+        <li class="treeview">
+          <a href="<?php echo base_url(); ?>admin/pesanAll">
             <i class="fa fa-envelope"></i> <span>Pesan</span></i>
             <span class="pull-right-container">
-              <span class="label label-danger pull-right">0</span>
+              <span class="label label-danger pull-right"><?php echo $pesan; ?></span>
             </span>
           </a>
         </li>   

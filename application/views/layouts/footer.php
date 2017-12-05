@@ -55,7 +55,7 @@
     <div class="container">
       <div class="row clearfix">
         <div class="col-sm-12 col-xs-12 copyRight">
-          <center><p>© 2017 Copyright Sekolah Laboratorium UPI, Developed by <a href="#">Inquery</a></p></center>
+          <center><p>© 2017 Copyright Sekolah Laboratorium UPI</p></center>
         </div><!-- col-sm-6 col-xs-12 -->
       </div><!-- row clearfix -->
     </div><!-- container -->

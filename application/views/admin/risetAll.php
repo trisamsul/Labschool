@@ -3,26 +3,26 @@
   <div class="content-wrapper">
     <section class="content-header">
       <h1>
-        Berita
-        <small>Semua Berita</small>
+        Riset
+        <small>Semua Riset</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-book"></i> Berita</a></li>
-        <li class="active">Semua Berita</li>
+        <li><a href="#"><i class="fa fa-book"></i> Riset</a></li>
+        <li class="active">Semua Riset</li>
       </ol>
     </section>
   <!-- Main content -->
     <section class="content">
       <?php if ($this->uri->segment(3) == "Success"){ ?>
       <div class="alert alert-success" role="alert">
-        Berita berhasil diposting, silahkan cek pada daftar berita dibawah ini.
+        Riset berhasil diposting, silahkan cek pada daftar riset dibawah ini.
       </div>
       <?php } ?>
       <div class="row">
         <div class="col-xs-12">
         <div class="box">
             <div class="box-header">
-            <h3 class="box-title">Daftar Berita</h3>
+            <h3 class="box-title">Daftar Riset</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -30,9 +30,12 @@
                 <thead>
                 <tr>
                     <th>No.</th>
-                    <th>Judul Berita</th>
-                    <th>Tanggal</th>
-                    <th>Foto</th>
+                    <th>Judul Riset</th>
+                    <th>Bidang</th>
+                    <th>Penulis</th>
+                    <th>Tahun</th>
+                    <th>File</th>
+                    <th>Video</th>
                     <th>Aksi</th>
                 </tr>
                 </thead>
@@ -42,11 +45,13 @@
                  ?>
                 <tr >
                     <td><?php echo $i++; ?></td>
-                    <td><?php echo $row['berita_judul']; ?></td>
-                    <td><?php echo $row['berita_tanggal']; ?></td>
-                    <td><a href="<?php echo base_url(); ?>uploads/berita/<?php echo $row['berita_foto']; ?>" target="_blank">Foto</a></td>
+                    <td><?php echo $row['riset_judul']; ?></td>
+                    <td><?php echo $row['riset_bidang']; ?></td>
+                    <td><?php echo $row['riset_penulis']; ?></td>
+                    <td><?php echo $row['riset_tahun']; ?></td>
+                    <td><a href="<?php echo base_url(); ?>uploads/riset/files/<?php echo $row['riset_file']; ?>" target="_blank"><?php echo $row['riset_file']; ?></a></td>
+                    <td><a href="<?php echo base_url(); ?>uploads/riset/videos/<?php echo $row['riset_video']; ?>" target="_blank"><?php echo $row['riset_video']; ?></a></td>
                     <td>
-                      <button type="button" class="btn btn-sm bg-navy"><i class="fa fa-eye-slash"></i></button>
                       <button type="button" class="btn btn-sm bg-orange"><i class="fa fa-edit"></i></button>
                       <button type="button" class="btn btn-sm bg-red"><i class="fa fa-times"></i></button>
                     </td>
@@ -55,11 +60,14 @@
                 </tbody>
                 <tfoot>
                 <tr>
-                  <th>No.</th>
-                  <th>Judul Berita</th>
-                  <th>Tanggal</th>
-                  <th>Foto</th>
-                  <th>Aksi</th>
+                    <th>No.</th>
+                    <th>Judul Riset</th>
+                    <th>Bidang</th>
+                    <th>Penulis</th>
+                    <th>Tahun</th>
+                    <th>File</th>
+                    <th>Video</th>
+                    <th>Aksi</th>
                 </tr>
                 </tfoot>
             </table>

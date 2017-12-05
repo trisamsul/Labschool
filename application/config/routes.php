@@ -59,3 +59,4 @@ $route['galeri'] = 'Home/galeri';
 $route['pengelola'] = 'Home/pengelola';
 $route['pimpinan'] = 'Home/pimpinan';
 $route['riset'] = 'Home/riset';
+$route['kontak/Success'] = 'Home/kontak/Success';
