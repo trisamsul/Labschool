@@ -5,8 +5,8 @@
             <ul class="gallery popup-gallery gallery-3col">
             <?php foreach($galeri as $i){ ?>
                 <li class="col-md-4">
-                    <a href="<?php echo base_url(); ?>uploads/galeri/images/<?php echo $i['galeri_file']; ?>" title="Photo 2">
-                        <img src="<?php echo base_url(); ?>uploads/galeri/images/<?php echo $i['galeri_file']; ?>" alt="" class="img-responsive"/>
+                    <a href="<?php echo base_url(); ?>uploads/galeri/videos/<?php echo $i['galeri_file']; ?>" title="Photo 2">
+                        <img src="<?php echo base_url(); ?>uploads/galeri/videos/<?php echo $i['galeri_file']; ?>" alt="" class="img-responsive"/>
                         <div class="overlay">
                             <span class="zoom">
                                 <i class="fa fa-search"></i>

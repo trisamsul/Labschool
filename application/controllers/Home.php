@@ -22,6 +22,7 @@ class Home extends CI_Controller {
 	 public function index()
 	{
 		$data['berita'] = $this->ModelNews->selectAll(4)->result_array();
+		$data['agenda'] = $this->ModelAgenda->selectAll(3)->result_array();
 		$this->load->view('layouts/header');
 		$this->load->view('index',$data);
 		$this->load->view('layouts/footer');
@@ -60,11 +61,19 @@ class Home extends CI_Controller {
 	}
 	
 	//halaman galeri
-	public function galeri()
+	public function galeriFoto()
 	{
-		$data['galeri'] = $this->ModelGaleri->selectAll()->result_array();
+		$data['galeri'] = $this->ModelGaleri->selectImages()->result_array();
 		$this->load->view('layouts/header');
-		$this->load->view('galeri',$data);
+		$this->load->view('galeriFoto',$data);
+		$this->load->view('layouts/footer');
+	}
+	
+	public function galeriVideo()
+	{
+		$data['galeri'] = $this->ModelGaleri->selectVideos()->result_array();
+		$this->load->view('layouts/header');
+		$this->load->view('galeriVideo',$data);
 		$this->load->view('layouts/footer');
 	}
 

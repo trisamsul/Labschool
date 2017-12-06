@@ -158,7 +158,19 @@
             </span></a></li>
             <li><a href="<?php echo base_url(); ?>admin/risetPost"><i class="fa fa-edit"></i> Unggah Riset</a></li>
           </ul>
-        </li>                      
+        </li>  
+        <li class="treeview">
+          <a href="#">
+              <i class="fa fa-calendar"></i> <span>Agenda</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url(); ?>admin/agendaAll"><i class="fa fa-th"></i> Semua Agenda<span class="pull-right-container">
+              <span class="label label-warning pull-right"><?php echo $agenda; ?></span>
+            </span></a></li>
+            <li><a href="<?php echo base_url(); ?>admin/agendaPost"><i class="fa fa-edit"></i> Tambah Agenda</a></li>
+          </ul>
+        </li>                    
         <li class="treeview">
           <a href="<?php echo base_url(); ?>admin/pesanAll">
             <i class="fa fa-envelope"></i> <span>Pesan</span></i>

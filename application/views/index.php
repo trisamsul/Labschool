@@ -96,7 +96,7 @@
                           <?php 
                             $tanggal = new DateTime($i['berita_tanggal']);
                           ?>
-                          <h5 class="news-date"><?php echo $tanggal->format('d-M-Y'); ?></h5>
+                          <h5 class="news-date"><?php echo $tanggal->format('d-m-Y'); ?></h5>
                           <p class="news-text"><?php echo mb_strimwidth($i['berita_teks'], 0, 150, "...") ?></p>
                           <br>
                           <a href="<?php echo base_url(); ?>berita/view/<?php echo $i['berita_id']; ?>" class="btn btn-default btn-block commonBtn">Selengkapnya</a>
@@ -133,39 +133,25 @@
               <div class="upcoming_events">
                 <h3>Agenda Kegiatan</h3>
                 <ul>
+                <?php foreach($agenda as $i){ ?>
                   <li class="related_post_sec single_post">
+                    <?php
+                      $tanggal = new DateTime($i['agenda_tanggal']);
+                    ?>
                     <span class="date-wrapper">
-                      <span class="date"><span>14</span>Juli</span>
+                      <span class="date"><span><?php echo $tanggal->format('d'); ?></span><?php echo $tanggal->format('M'); ?></span>
                     </span>
                     <div class="rel_right">
-                      <h4><a href="#">Orientasi Peserta Didik Baru Tahun Ajaran 2017-2018</a></h4>
+                      <h4 style="margin-top: 15px;"><a href="#"><?php echo $i['agenda_nama']; ?></a></h4>
                       <div class="meta">
-                        <span class="place"><i class="fa fa-map-marker"></i>SMP Lab. Cibiru</span>
+                        <span class="place"><i class="fa fa-map-marker"></i><?php echo $i['agenda_tempat']; ?></span>
                       </div>
                     </div>
+                    <br>
+                    <br>
+                    <br>
                   </li>
-				  <li class="related_post_sec single_post">
-                    <span class="date-wrapper">
-                      <span class="date"><span>11</span>Juni</span>
-                    </span>
-                    <div class="rel_right">
-                      <h4><a href="#">Peringatan HUT SMP Laboratorium Kampus Tasikmalaya</a></h4>
-                      <div class="meta">
-                        <span class="place"><i class="fa fa-map-marker"></i>SMA Lab. Tasikmalaya</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="related_post_sec single_post">
-                    <span class="date-wrapper">
-                      <span class="date"><span>08</span>Juni</span>
-                    </span>
-                    <div class="rel_right">
-                      <h4><a href="#">Upacara Pelepasan "Paturay Tineung" Siswa Kelas XII</a></h4>
-                      <div class="meta">
-                        <span class="place"><i class="fa fa-map-marker"></i>SMA Lab. Serang</span>
-                      </div>
-                    </div>
-                  </li>
+                <?php } ?>
                 </ul>
                 <!-- <a href="#" class="btn btn-default btn-block commonBtn">Selengkapnya</a> -->
               </div>

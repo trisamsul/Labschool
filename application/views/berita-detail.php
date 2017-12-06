@@ -36,15 +36,18 @@
 									<ul>
                   <?php foreach($all as $i){ ?>
 									<li>
-										<span class="rel_thumb">
-											<img style="width: 100px;float:left;" src="<?php echo base_url(); ?>uploads/berita/<?php echo $i['berita_foto']; ?>" alt="" />
-										</span><!--end rel_thumb-->
-										<div class="rel_right">
+										<div class="col-md-5">
+											<img class="img-responsive" src="<?php echo base_url(); ?>uploads/berita/<?php echo $i['berita_foto']; ?>" alt="" />
+										</div><!--end rel_thumb-->
+										<div class="col-md-7">
                       <?php 
                         $tanggal = new DateTime($i['berita_tanggal']);
                       ?>
-                      <span class="date">Tanggal: <?php echo $tanggal->format('d-M-Y'); ?></span>
-											<a href="<?php echo base_url(); ?>berita/view/<?php echo $i['berita_id']; ?>"><h4><?php echo $i['berita_judul']; ?></h4></a>
+                      <span class="date">Tanggal: <?php echo $tanggal->format('d-m-Y'); ?></span>
+											<br>
+											<a href="<?php echo base_url(); ?>berita/view/<?php echo $i['berita_id']; ?>" style="color: #545454"><?php echo $i['berita_judul']; ?></a>
+											<br>
+											<br>
 										</div><!--end rel right-->
                   </li>
                   <?php } ?>

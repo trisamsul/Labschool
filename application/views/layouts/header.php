@@ -125,8 +125,12 @@
                       <li class="">
                           <a href="<?php echo base_url(); ?>riset" >Riset</a>
                         </li>
-                      <li class="">
-                          <a href="<?php echo base_url(); ?>galeri" >Galeri</a>
+                      <li class=" dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Galeri</a>
+                          <ul class="dropdown-menu">
+                            <li><a href="<?php echo base_url(); ?>galeriFoto">Foto</a></li>
+                            <li><a href="<?php echo base_url(); ?>galeriVideo">Video</a></li>
+                          </ul>
                         </li>
                       <li class="">
                           <a href="<?php echo base_url(); ?>kontak" >Kontak</a>

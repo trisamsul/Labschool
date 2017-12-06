@@ -25,6 +25,7 @@ class Admin extends CI_Controller {
 		$this->head['riset'] = $this->ModelRiset->selectAll()->num_rows();
 		$this->head['galeri'] = $this->ModelGaleri->selectAll()->num_rows();
 		$this->head['pesan'] = $this->ModelKontak->selectAll()->num_rows();
+		$this->head['agenda'] = $this->ModelAgenda->selectAll()->num_rows();
 	}
     
      //halaman utama
@@ -227,5 +228,28 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/layouts/header',$this->head);
 		$this->load->view('admin/pesanAll',$data);
 		$this->load->view('admin/layouts/footer');
+	}
+
+	public function agendaAll()
+	{
+        $data['all'] = $this->ModelAgenda->selectAll()->result_array();		
+		$this->load->view('admin/layouts/header',$this->head);
+		$this->load->view('admin/agendaAll',$data);
+		$this->load->view('admin/layouts/footer');
+	}
+
+	public function agendaPost()
+	{
+		$this->load->view('admin/layouts/header',$this->head);
+		$this->load->view('admin/agendaPost');
+		$this->load->view('admin/layouts/footer');
+	}
+
+	public function addAgenda(){
+		$insert = $this->input->post();
+		$insert['agenda_tanggal'] = date("Y-m-d",strtotime($this->input->post('agenda_tanggal')));
+		// var_dump($insert);
+		$this->ModelAgenda->insert($insert);
+		redirect('admin/agendaAll/Success');
 	}
 }
