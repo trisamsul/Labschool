@@ -42,8 +42,8 @@
         <div class="container">
           <ul class="topbar-left">
             <li class="phoneNo"><i class="fa fa-phone"></i>022-2013342</li>
-            <li class="email-id hidden-xs hidden-sm"><i class="fa fa-envelope"></i>
-              <a href="mailto:info@yourdomain.com">bpslabschoolupi@gmail.com</a>
+            <li class="phoneNo"><i class="fa fa-address-book"></i>
+              <a href="<?php echo base_url(); ?>kontak">Hubungi Kami</a>
             </li>
           </ul>
           <ul class="topbar-right">
@@ -119,6 +119,14 @@
                           </li>
                         </ul>
                       </li>
+                      <li class=" dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Prestasi</a>
+                          <ul class="dropdown-menu">
+                            <?php foreach($prestasi as $row){ ?>
+                                <li><a href="<?php echo site_url(); ?>prestasi/tahun/<?php echo $row['prestasi_tahun']; ?>" title="">Tahun <?php echo $row['prestasi_tahun']; ?></a></li>
+                            <?php } ?>
+                          </ul>
+                        </li>
                       <li class="">
                           <a href="<?php echo base_url(); ?>berita" >Berita</a>
                         </li>
@@ -131,9 +139,6 @@
                             <li><a href="<?php echo base_url(); ?>galeriFoto">Foto</a></li>
                             <li><a href="<?php echo base_url(); ?>galeriVideo">Video</a></li>
                           </ul>
-                        </li>
-                      <li class="">
-                          <a href="<?php echo base_url(); ?>kontak" >Kontak</a>
                         </li>
                     </ul>
                   </div><!-- navbar-collapse -->

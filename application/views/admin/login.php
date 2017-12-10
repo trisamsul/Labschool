@@ -20,7 +20,7 @@
 
   <style>
     .bg{
-        background-color: #204d74;
+        background-color: #C10E0E;
     }
     .login-logo a{
         color: #fff;

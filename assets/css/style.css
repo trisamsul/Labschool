@@ -7082,7 +7082,7 @@ p.reduceMargin {
 }
 
 ul.list {
-  border-bottom: 1px solid #dce4ea;
+  /* border-bottom: 1px solid #dce4ea; */
   margin: 30px 0 50px;
   float: left;
   clear: both;

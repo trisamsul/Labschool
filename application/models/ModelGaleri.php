@@ -31,6 +31,7 @@ class ModelGaleri extends CI_Model {
 		$this->db->select('*');
 		$this->db->from($this->tableName);
 		$this->db->where('galeri_kategori',0);
+		$this->db->order_by('galeri_id','DESC');
 
 		return $this->db->get();
     }
@@ -39,6 +40,7 @@ class ModelGaleri extends CI_Model {
 		$this->db->select('*');
 		$this->db->from($this->tableName);
 		$this->db->where('galeri_kategori',1);
+		$this->db->order_by('galeri_id','DESC');
 
 		return $this->db->get();
 	}

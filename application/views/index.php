@@ -3,23 +3,26 @@
     <div class="banner carousel slide" id="recommended-item-carousel" data-ride="carousel">
       <div class="slides carousel-inner">
         <div class="item active">
-          <a href="http://upi.edu" target="_blank"><img src="<?php echo base_url(); ?>assets/img/home/slider/slider_image_1.jpg" alt="" /></a>
+          <img src="<?php echo base_url(); ?>assets/img/slider/slider_image_1.jpg" alt="" />
         </div>
         <div class="item">
-            <a href="http://upi.edu" target="_blank"><img src="<?php echo base_url(); ?>assets/img/home/slider/slider_image_2.jpg" alt="" /></a>
+            <img src="<?php echo base_url(); ?>assets/img/slider/slider_image_2.jpg" alt="" />
         </div>
         <div class="item">
-            <a href="http://upi.edu" target="_blank"><img src="<?php echo base_url(); ?>assets/img/home/slider/slider_image_3.jpg" alt="" /></a>
+            <img src="<?php echo base_url(); ?>assets/img/slider/slider_image_3.jpg" alt="" />
         </div>
         <div class="item">
-          <a href="http://upi.edu" target="_blank"><img src="<?php echo base_url(); ?>assets/img/home/slider/slider_image_4.jpg" alt="" /></a>
-      </div>
+          <img src="<?php echo base_url(); ?>assets/img/slider/slider_image_4.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="<?php echo base_url(); ?>assets/img/slider/slider_image_5.jpg" alt="" />
+        </div>
       </div>
       <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
-        <img src="<?php echo base_url(); ?>assets/img/home/slider/prev.png">
+        <img src="<?php echo base_url(); ?>assets/img/slider/prev.png">
         </a>
       <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
-        <img src="<?php echo base_url(); ?>assets/img/home/slider//next.png">
+        <img src="<?php echo base_url(); ?>assets/img/slider/next.png">
       </a>
     </div><!--end banner-->
     
@@ -220,7 +223,7 @@
               </div>
               <div class="carousal_bottom">
                 <div class="thumb">
-                  <img src="<?php echo base_url(); ?>assets/img/about/SARA-LISBON_Art-Student.jpg" alt="" draggable="false">
+                  <img src="<?php echo base_url(); ?>assets/img/labschool/aim.jpg" alt="" draggable="false">
                 </div>
                 <div class="thumb_title">
                   <span class="author_name">Prof. Dr. Aim Abdulkarim, M.Pd.</span>

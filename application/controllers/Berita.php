@@ -21,17 +21,18 @@ class Berita extends CI_Controller {
 	public function index()
 	{
 		$data['all'] = $this->ModelNews->selectAll(5)->result_array();
+		$data['prestasi'] = $this->ModelPrestasi->selectYear()->result_array();
 		$this->load->view('layouts/header',$data);
 		$this->load->view('berita',$data);
-		$this->load->view('layouts/footer',$data);
+		$this->load->view('layouts/footer');
     }
     
     public function view($id){
 		$data['all'] = $this->ModelNews->selectAll(5)->result_array();
 		$data['news'] = $this->ModelNews->selectById($id)->row_array();
-		// var_dump($data);
+		$data['prestasi'] = $this->ModelPrestasi->selectYear()->result_array();
 		$this->load->view('layouts/header',$data);
 		$this->load->view('berita-detail',$data);
-		$this->load->view('layouts/footer',$data);		
+		$this->load->view('layouts/footer');		
 	}
 }

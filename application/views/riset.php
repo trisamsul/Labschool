@@ -19,23 +19,23 @@
                         <table id="myTable" class="table table-bordered table-striped">
                             <thead style="background-color: #C10E0E;">
                                 <tr>
+                                <th>Penulis</th>
                                 <th>Judul Riset</th>
                                 <th>Bidang</th>
-                                <th>Penulis</th>
                                 <th>Tahun</th>
                                 <th>Download</th>
-                                <th>Video</th>
+                                <!-- <th>Video</th> -->
                                 </tr>
                             </thead>
                             <tbody>
                             <?php foreach($riset as $i){ ?>
                                 <tr>
+                                    <td><?php echo $i['riset_penulis']; ?></td>
                                     <td><?php echo $i['riset_judul']; ?></td>
                                     <td><?php echo $i['riset_bidang']; ?></td>
-                                    <td><?php echo $i['riset_penulis']; ?></td>
                                     <td><?php echo $i['riset_tahun']; ?></td>
                                     <td><a href="<?php echo base_url(); ?>uploads/riset/files/<?php echo $i['riset_file']; ?>"><i class="fa fa-download" aria-hidden="true"> Download</i></a></td>
-                                    <td><a href="<?php echo base_url(); ?>uploads/riset/videos/<?php echo $i['riset_video']; ?>"><i class="fa fa-download" aria-hidden="true"> Download</i></a></td>
+                                    <!-- <td><a href="<?php echo base_url(); ?>uploads/riset/videos/<?php echo $i['riset_video']; ?>"><i class="fa fa-download" aria-hidden="true"> Download</i></a></td> -->
                                 </tr>
                             <?php } ?>
                             </tbody>
@@ -71,21 +71,22 @@
 </div><!--end post section-->
 
 <script>
-function myFunction() {
-  var input, filter, table, tr, td, i;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }       
-  }
+function filterTable(event) {
+    var filter = event.target.value.toUpperCase();
+    var rows = document.querySelector("#myTable tbody").rows;
+    
+    for (var i = 0; i < rows.length; i++) {
+        var penulis = rows[i].cells[0].textContent.toUpperCase();
+        var judul = rows[i].cells[1].textContent.toUpperCase();
+        var bidang = rows[i].cells[2].textContent.toUpperCase();
+        var tahun = rows[i].cells[3].textContent.toUpperCase();
+        if (penulis.indexOf(filter) > -1 || judul.indexOf(filter) > -1 || bidang.indexOf(filter) > -1 || tahun.indexOf(filter) > -1) {
+            rows[i].style.display = "";
+        } else {
+            rows[i].style.display = "none";
+        }      
+    }
 }
+
+document.querySelector('#myInput').addEventListener('keyup', filterTable, false);
 </script>

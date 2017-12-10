@@ -23,7 +23,8 @@ class Home extends CI_Controller {
 	{
 		$data['berita'] = $this->ModelNews->selectAll(4)->result_array();
 		$data['agenda'] = $this->ModelAgenda->selectAll(3)->result_array();
-		$this->load->view('layouts/header');
+		$data['prestasi'] = $this->ModelPrestasi->selectYear()->result_array();
+		$this->load->view('layouts/header',$data);
 		$this->load->view('index',$data);
 		$this->load->view('layouts/footer');
 	}
@@ -31,7 +32,8 @@ class Home extends CI_Controller {
 	//halaman sejarah
 	public function sejarah()
 	{
-		$this->load->view('layouts/header');
+		$data['prestasi'] = $this->ModelPrestasi->selectYear()->result_array();
+		$this->load->view('layouts/header',$data);
 		$this->load->view('sejarah');
 		$this->load->view('layouts/footer');
 	}
@@ -39,7 +41,8 @@ class Home extends CI_Controller {
 	//halaman visimisi
 	public function visimisi()
 	{
-		$this->load->view('layouts/header');
+		$data['prestasi'] = $this->ModelPrestasi->selectYear()->result_array();
+		$this->load->view('layouts/header',$data);
 		$this->load->view('visimisi');
 		$this->load->view('layouts/footer');
 	}
@@ -47,13 +50,15 @@ class Home extends CI_Controller {
 	//halaman kontak
 	public function kontak()
 	{
-		$this->load->view('layouts/header');
+		$data['prestasi'] = $this->ModelPrestasi->selectYear()->result_array();
+		$this->load->view('layouts/header',$data);
 		$this->load->view('kontak');
 		$this->load->view('layouts/footer');
 	}
 
 	public function addPesan(){
-		$insert = $this->input->post();
+		$data['prestasi'] = $this->ModelPrestasi->selectYear()->result_array();
+		$this->load->view('layouts/header',$data);
 		$insert['kontak_tanggal'] = date('Y-m-d');
 		// var_dump($insert);
 		$this->ModelKontak->insert($insert);
@@ -64,7 +69,8 @@ class Home extends CI_Controller {
 	public function galeriFoto()
 	{
 		$data['galeri'] = $this->ModelGaleri->selectImages()->result_array();
-		$this->load->view('layouts/header');
+		$data['prestasi'] = $this->ModelPrestasi->selectYear()->result_array();
+		$this->load->view('layouts/header',$data);
 		$this->load->view('galeriFoto',$data);
 		$this->load->view('layouts/footer');
 	}
@@ -72,7 +78,8 @@ class Home extends CI_Controller {
 	public function galeriVideo()
 	{
 		$data['galeri'] = $this->ModelGaleri->selectVideos()->result_array();
-		$this->load->view('layouts/header');
+		$data['prestasi'] = $this->ModelPrestasi->selectYear()->result_array();
+		$this->load->view('layouts/header',$data);
 		$this->load->view('galeriVideo',$data);
 		$this->load->view('layouts/footer');
 	}
@@ -80,7 +87,8 @@ class Home extends CI_Controller {
 	//halaman pengelola
 	public function pengelola()
 	{
-		$this->load->view('layouts/header');
+		$data['prestasi'] = $this->ModelPrestasi->selectYear()->result_array();
+		$this->load->view('layouts/header',$data);
 		$this->load->view('pengelola');
 		$this->load->view('layouts/footer');
 	}
@@ -88,7 +96,8 @@ class Home extends CI_Controller {
 	//halaman pimpinan
 	public function pimpinan()
 	{
-		$this->load->view('layouts/header');
+		$data['prestasi'] = $this->ModelPrestasi->selectYear()->result_array();
+		$this->load->view('layouts/header',$data);
 		$this->load->view('pimpinan');
 		$this->load->view('layouts/footer');
 	}
@@ -97,7 +106,8 @@ class Home extends CI_Controller {
 	public function riset()
 	{
 		$data['riset'] = $this->ModelRiset->selectAll()->result_array();
-		$this->load->view('layouts/header');
+		$data['prestasi'] = $this->ModelPrestasi->selectYear()->result_array();
+		$this->load->view('layouts/header',$data);
 		$this->load->view('riset',$data);
 		$this->load->view('layouts/footer');
 	}

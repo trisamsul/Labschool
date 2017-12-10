@@ -30,9 +30,9 @@
                 <thead>
                 <tr>
                     <th>No.</th>
+                    <th>Penulis</th>
                     <th>Judul Riset</th>
                     <th>Bidang</th>
-                    <th>Penulis</th>
                     <th>Tahun</th>
                     <th>File</th>
                     <th>Video</th>
@@ -45,9 +45,9 @@
                  ?>
                 <tr >
                     <td><?php echo $i++; ?></td>
+                    <td><?php echo $row['riset_penulis']; ?></td>
                     <td><?php echo $row['riset_judul']; ?></td>
                     <td><?php echo $row['riset_bidang']; ?></td>
-                    <td><?php echo $row['riset_penulis']; ?></td>
                     <td><?php echo $row['riset_tahun']; ?></td>
                     <td><a href="<?php echo base_url(); ?>uploads/riset/files/<?php echo $row['riset_file']; ?>" target="_blank"><?php echo $row['riset_file']; ?></a></td>
                     <td><a href="<?php echo base_url(); ?>uploads/riset/videos/<?php echo $row['riset_video']; ?>" target="_blank"><?php echo $row['riset_video']; ?></a></td>
@@ -61,9 +61,9 @@
                 <tfoot>
                 <tr>
                     <th>No.</th>
+                    <th>Penulis</th>
                     <th>Judul Riset</th>
                     <th>Bidang</th>
-                    <th>Penulis</th>
                     <th>Tahun</th>
                     <th>File</th>
                     <th>Video</th>

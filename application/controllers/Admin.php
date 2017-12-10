@@ -22,6 +22,7 @@ class Admin extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->head['berita'] = $this->ModelNews->selectAll()->num_rows();
+		$this->head['prestasi'] = $this->ModelPrestasi->selectAll()->num_rows();
 		$this->head['riset'] = $this->ModelRiset->selectAll()->num_rows();
 		$this->head['galeri'] = $this->ModelGaleri->selectAll()->num_rows();
 		$this->head['pesan'] = $this->ModelKontak->selectAll()->num_rows();
@@ -251,5 +252,45 @@ class Admin extends CI_Controller {
 		// var_dump($insert);
 		$this->ModelAgenda->insert($insert);
 		redirect('admin/agendaAll/Success');
+	}
+
+	public function prestasiAll()
+	{
+        $data['all'] = $this->ModelPrestasi->selectAll()->result_array();		
+		$this->load->view('admin/layouts/header',$this->head);
+		$this->load->view('admin/prestasiAll',$data);
+		$this->load->view('admin/layouts/footer');
+	}
+
+	public function prestasiPost()
+	{
+		$this->load->view('admin/layouts/header',$this->head);
+		$this->load->view('admin/prestasiPost');
+		$this->load->view('admin/layouts/footer');
+	}
+
+	public function addPrestasi(){
+		// var_dump($this->input->post());
+		$data = $this->input->post();
+		// print_r(nl2br($data['teks']))
+		unset($data['_wysihtml5_mode']);
+		// var_dump($data);
+
+		$config['upload_path']		= './uploads/prestasi/';
+		$config['allowed_types']	= '*';
+		$config['max_size']			= 0;				
+		date_default_timezone_set("Asia/Bangkok");
+		$config['file_name']		= "PRESTASI_".time();
+		$this->load->library('upload', $config);
+		var_dump($_FILES);
+		if(!$this->upload->do_upload('file')){
+			//gagal
+			$error = array('error' => $this->upload->display_errors());
+			// var_dump($error);
+		} else{
+			$data['prestasi_foto'] = $config['file_name'].$this->upload->data('file_ext');
+			$this->ModelPrestasi->insert($data);
+			redirect('admin/prestasiAll/Success');
+		}
 	}
 }

@@ -136,6 +136,18 @@
         </li>
         <li class="treeview">
           <a href="#">
+              <i class="fa fa-trophy"></i> <span>Prestasi</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url(); ?>admin/prestasiAll"><i class="fa fa-th"></i> Semua Prestasi<span class="pull-right-container">
+              <span class="label label-warning pull-right"><?php echo $prestasi; ?></span>
+            </span></a></li>
+            <li><a href="<?php echo base_url(); ?>admin/prestasiPost"><i class="fa fa-edit"></i> Tambah Prestasi</a></li>
+          </ul>
+        </li>  
+        <li class="treeview">
+          <a href="#">
               <i class="fa fa-photo"></i> <span>Galeri</span>
             <i class="fa fa-angle-left pull-right"></i>
           </a>

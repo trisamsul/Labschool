@@ -43,7 +43,7 @@
                       <?php 
                         $tanggal = new DateTime($i['berita_tanggal']);
                       ?>
-                      <span class="date">Tanggal: <?php echo $tanggal->format('d-m-Y'); ?></span>
+                      <span class="date"><?php echo $tanggal->format('d-m-Y'); ?></span>
 											<br>
 											<a href="<?php echo base_url(); ?>berita/view/<?php echo $i['berita_id']; ?>" style="color: #545454"><?php echo $i['berita_judul']; ?></a>
 											<br>
