@@ -17,7 +17,6 @@
                                         <a href="<?php echo base_url(); ?>berita/view/<?php echo $i['berita_id']; ?>"><img src="<?php echo base_url(); ?>uploads/berita/<?php echo $i['berita_foto']; ?>" class="img-responsive" alt=""></a>
                                     </div><!--end rel_thumb-->
                                     <div class="col-md-9">
-                                        <br>
                                         <a href="<?php echo base_url(); ?>berita/view/<?php echo $i['berita_id']; ?>"><h2><?php echo $i['berita_judul']; ?></h2></a>
                                         <div class="meta">
                                             <span class="author">Oleh: <a href="#">Labschool UPI</a></span>

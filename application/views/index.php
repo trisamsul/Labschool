@@ -9,13 +9,13 @@
             <img src="<?php echo base_url(); ?>assets/img/slider/slider_image_2.jpg" alt="" />
         </div>
         <div class="item">
-            <img src="<?php echo base_url(); ?>assets/img/slider/slider_image_3.jpg" alt="" />
-        </div>
-        <div class="item">
           <img src="<?php echo base_url(); ?>assets/img/slider/slider_image_4.jpg" alt="" />
         </div>
         <div class="item">
           <img src="<?php echo base_url(); ?>assets/img/slider/slider_image_5.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="<?php echo base_url(); ?>assets/img/slider/slider_image_6.jpg" alt="" />
         </div>
       </div>
       <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
@@ -145,7 +145,7 @@
                       <span class="date"><span><?php echo $tanggal->format('d'); ?></span><?php echo $tanggal->format('M'); ?></span>
                     </span>
                     <div class="rel_right">
-                      <h4 style="margin-top: 15px;"><a href="#"><?php echo $i['agenda_nama']; ?></a></h4>
+                      <h4 style=""><a href="#"><?php echo $i['agenda_nama']; ?></a></h4>
                       <div class="meta">
                         <span class="place"><i class="fa fa-map-marker"></i><?php echo $i['agenda_tempat']; ?></span>
                       </div>

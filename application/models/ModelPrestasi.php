@@ -20,10 +20,9 @@ class ModelPrestasi extends CI_Model {
 	}
 
     public function selectYear(){
-        $this->db->select('*');
+        $this->db->select('prestasi_tahun');
         $this->db->group_by('prestasi_tahun');
-        $this->db->order_by('prestasi_tahun','DESC');
-		$this->db->from($this->tableName);
+        $this->db->from($this->tableName);
 
 		return $this->db->get();
     }
@@ -36,10 +35,14 @@ class ModelPrestasi extends CI_Model {
 		return $this->db->get();
     }
     
-    public function selectByYear($year){
+    public function selectByYear($year,$sekolah){
 		$this->db->select('*');
 		$this->db->from($this->tableName);
 		$this->db->where('prestasi_tahun',$year);
+		$this->db->where('prestasi_sekolah',$sekolah);		
+		if($sekolah!=NULL){
+
+		}
 		$this->db->order_by('prestasi_id','DESC');
 
 		return $this->db->get();
@@ -51,8 +54,13 @@ class ModelPrestasi extends CI_Model {
 
 	public function update($id,$data){
 		$this->db->set($data);
-		$this->db->where('berita_id',$id);
+		$this->db->where('prestasi_id',$id);
 		return $this->db->update($this->tableName);
+	}
+
+	public function delete($id){
+		$this->db->where('prestasi_id',$id);
+		$this->db->delete($this->tableName);
 	}
 
 }

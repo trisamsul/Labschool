@@ -50,8 +50,8 @@
 								<ul class="contact_info">
 									<li><i class="fa fa-home"></i> Jl. Dr. Setiabuhi No. 229. Bandung</li>
 									<li><i class="fa fa-envelope"></i> <a href="mailto:info@example.com">bpslabschoolupi@gmail.com</a></li>
-									<li><i class="fa fa-phone"></i> 012-3434-456768</li>
-									<li><i class="fa fa-globe"></i> <a href="#">http://www.labschool.upi.edu</a></li>
+									<li><i class="fa fa-phone"></i> 022-2013342</li>
+									<li><i class="fa fa-globe"></i> <a href="http://labschool.upi.edu">http://labschool.upi.edu</a></li>
 								</ul>
 							</div>
 							<div class="list_block">

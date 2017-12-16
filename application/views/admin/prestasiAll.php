@@ -32,6 +32,7 @@
                     <th>No.</th>
                     <th>Tahun</th>
                     <th>Bulan</th>
+                    <th>Sekolah</th>
                     <th>Siswa</th>
                     <th>Lomba</th>
                     <th>Juara</th>
@@ -48,6 +49,7 @@
                     <td><?php echo $i++; ?></td>
                     <td><?php echo $row['prestasi_tahun']; ?></td>
                     <td><?php echo $row['prestasi_bulan']; ?></td>
+                    <td><?php echo $row['prestasi_sekolah']; ?></td>
                     <td><?php echo $row['prestasi_siswa']; ?></td>
                     <td><?php echo $row['prestasi_lomba']; ?></td>
                     <td><?php echo $row['prestasi_juara']; ?></td>
@@ -55,7 +57,7 @@
                     <td><a href="<?php echo base_url(); ?>uploads/prestasi/<?php echo $row['prestasi_foto']; ?>" target="_blank"><?php echo $row['prestasi_foto']; ?></a></td>
                     <td>
                       <button type="button" class="btn btn-sm bg-orange"><i class="fa fa-edit"></i></button>
-                      <button type="button" class="btn btn-sm bg-red"><i class="fa fa-times"></i></button>
+                      <button type="button" class="btn btn-sm bg-red" onclick="location.href='<?php echo base_url();?>admin/deletePrestasi/<?php echo $row['prestasi_id'] ?>'"><i class="fa fa-times"></i></button>
                     </td>
                 </tr>
                 <?php } ?>
@@ -65,6 +67,7 @@
                     <th>No.</th>
                     <th>Tahun</th>
                     <th>Bulan</th>
+                    <th>Sekolah</th>
                     <th>Siswa</th>
                     <th>Lomba</th>
                     <th>Juara</th>

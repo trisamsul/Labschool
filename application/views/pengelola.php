@@ -24,7 +24,7 @@
                         <h4>Prof. Dr. H. R. Asep Kadarohman, M.Si. </h4>
                         <br>
                         <br>
-                        <h3>Wakil Rektor Bidang Perencanaan, Pengembangan, dan Sitsem Informasi</h3>
+                        <h3>Wakil Rektor Bidang Perencanaan, Pengembangan, dan Sistem Informasi</h3>
                         <br>
                         <img class="img img-responsive img-circle center-block" src="<?php echo base_url(); ?>assets/img/labschool/pengelola/aim.png" />
                         <br>
@@ -33,7 +33,7 @@
                         <br>
                         <h3>Ketua Badan Pengelola Sekolah</h3>
                         <br>
-                        <img class="img img-responsive img-circle center-block" src="<?php echo base_url(); ?>assets/img/labschool/pengelola/blank.png" />
+                        <img class="img img-responsive img-circle center-block" src="<?php echo base_url(); ?>assets/img/labschool/pengelola/prayoga.jpg" />
                         <br>
                         <h4>Dr. Prayoga Bestari, M.Si. </h4>
                         <br>

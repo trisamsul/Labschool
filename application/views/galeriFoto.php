@@ -20,7 +20,7 @@
             </center>
         </div><!--end custom_title-->
         <div class="photo_gallery custom">
-            <ul class="gallery popup-gallery gallery-3col">
+            <ul class="gallery gallery-3col">
             <?php $index = 0; ?>
             <div class="row">
             <?php foreach($galeri as $i){ ?>
@@ -31,11 +31,11 @@
                 }
                 ?>
                 <li class="col-md-4" style="padding: 0px;">
-                    <a href="<?php echo base_url(); ?>uploads/galeri/images/<?php echo $i['galeri_file']; ?>" title="<?php echo $i['galeri_caption']; ?>">
+                    <a href="<?php echo base_url(); ?>Home/galeriFotoCaption/<?php echo $i['galeri_id']; ?>">
                         <img src="<?php echo base_url(); ?>uploads/galeri/images/<?php echo $i['galeri_file']; ?>" alt=""/>
                         <div class="overlay">
                             <span class="zoom">
-                                <i class="fa fa-search"></i>
+                                <i class="fa fa-folder-open"></i>
                             </span>
                         </div>
                         <label class="galeri-caption"><?php echo $i['galeri_caption']; ?></label>

@@ -32,13 +32,18 @@ class Admin extends CI_Controller {
      //halaman utama
 	public function index()
 	{
-        $count['berita'] = $this->ModelNews->selectAll()->num_rows();
-        $count['riset'] = $this->ModelRiset->selectAll()->num_rows();
-        $count['galeri_image'] = $this->ModelGaleri->selectImages()->num_rows();
-        $count['galeri_video'] = $this->ModelGaleri->selectVideos()->num_rows();
-        $this->load->view('admin/layouts/header',$this->head);
-		$this->load->view('admin/index',$count);
-		$this->load->view('admin/layouts/footer');
+        if(isset($_SESSION['logged_in'])){
+			$count['berita'] = $this->ModelNews->selectAll()->num_rows();
+			$count['riset'] = $this->ModelRiset->selectAll()->num_rows();
+			$count['galeri_image'] = $this->ModelGaleri->selectImages()->num_rows();
+			$count['galeri_video'] = $this->ModelGaleri->selectVideos()->num_rows();
+			$this->load->view('admin/layouts/header',$this->head);
+			$this->load->view('admin/index',$count);
+			$this->load->view('admin/layouts/footer');
+		}else{
+			redirect('admin/login/unauth');
+		}
+		
     }
     
     public function login()
@@ -55,11 +60,10 @@ class Admin extends CI_Controller {
 			$userdata = array(
 				'username'  => $data['username'],
 				'fullname'  => $data['password'],
-				'log'  => $data['ll'],
 				'logged_in' => TRUE
 			);
 			$this->session->set_userdata($userdata);
-			redirect('Admin/');			
+			redirect('admin/');			
 		}
 	}
 
@@ -68,19 +72,48 @@ class Admin extends CI_Controller {
 		redirect('');
 	}
 
+	public function gantiPassword(){
+		$this->load->view('admin/layouts/header',$this->head);
+		$this->load->view('admin/gantiPassword');
+		$this->load->view('admin/layouts/footer');		
+	}
+
+	public function updatePass(){
+		$form = $this->input->post();
+		$data = $this->ModelAkun->check($this->session->userdata('username'),md5($form['old']))->row_array();
+
+		if(isset($data)){
+			// var_dump);
+			$update['password'] = md5($form['new']);
+			$this->ModelAkun->update($data['id'],$update);
+			redirect('admin/login/change');
+		}else{
+			redirect('admin/gantiPassword/failed');
+		}
+		
+	}
+
     public function newsAll()
 	{
-        $data['all'] = $this->ModelNews->selectAll()->result_array();		
-		$this->load->view('admin/layouts/header',$this->head);
-		$this->load->view('admin/newsAll',$data);
-		$this->load->view('admin/layouts/footer');
+        if(isset($_SESSION['logged_in'])){
+			$data['all'] = $this->ModelNews->selectAll()->result_array();		
+			$this->load->view('admin/layouts/header',$this->head);
+			$this->load->view('admin/newsAll',$data);
+			$this->load->view('admin/layouts/footer');
+		}else{
+			redirect('admin/login/unauth');
+		}
     }
 
     public function newsPost()
 	{
-		$this->load->view('admin/layouts/header',$this->head);
-		$this->load->view('admin/newsPost');
-		$this->load->view('admin/layouts/footer');
+		if(isset($_SESSION['logged_in'])){
+			$this->load->view('admin/layouts/header',$this->head);
+			$this->load->view('admin/newsPost');
+			$this->load->view('admin/layouts/footer');
+		}else{
+			redirect('admin/login/unauth');
+		}
     }
 
     public function addNews(){
@@ -109,26 +142,43 @@ class Admin extends CI_Controller {
 		}
 	}
 
+	public function deleteNews($id){
+		$this->ModelNews->delete($id);
+		redirect('admin/newsAll');
+	}
+
 	public function galeriAll()
 	{
-        $data['all'] = $this->ModelGaleri->selectAll()->result_array();		
-		$this->load->view('admin/layouts/header',$this->head);
-		$this->load->view('admin/galeriAll',$data);
-		$this->load->view('admin/layouts/footer');
+        if(isset($_SESSION['logged_in'])){
+			$data['all'] = $this->ModelGaleri->selectAll()->result_array();		
+			$this->load->view('admin/layouts/header',$this->head);
+			$this->load->view('admin/galeriAll',$data);
+			$this->load->view('admin/layouts/footer');
+		}else{
+			redirect('admin/login/unauth');
+		}
 	}
 	
 	public function galeriPostImg()
 	{
-		$this->load->view('admin/layouts/header',$this->head);
-		$this->load->view('admin/galeriPostImg');
-		$this->load->view('admin/layouts/footer');
+		if(isset($_SESSION['logged_in'])){
+			$this->load->view('admin/layouts/header',$this->head);
+			$this->load->view('admin/galeriPostImg');
+			$this->load->view('admin/layouts/footer');
+		}else{
+			redirect('admin/login/unauth');
+		}
 	}
 
 	public function galeriPostVid()
 	{
-		$this->load->view('admin/layouts/header',$this->head);
-		$this->load->view('admin/galeriPostVid');
-		$this->load->view('admin/layouts/footer');
+		if(isset($_SESSION['logged_in'])){
+			$this->load->view('admin/layouts/header',$this->head);
+			$this->load->view('admin/galeriPostVid');
+			$this->load->view('admin/layouts/footer');
+		}else{
+			redirect('admin/login/unauth');
+		}
 	}
 	
 	public function addImage(){
@@ -142,21 +192,43 @@ class Admin extends CI_Controller {
 		$config['allowed_types']	= '*';
 		$config['max_size']			= 0;				
 		date_default_timezone_set("Asia/Bangkok");
-		$config['file_name']		= "IMG_".time();
+		// $config['file_name']		= "IMG_".time();
 		$this->load->library('upload', $config);
-		var_dump($_FILES);
-		if(!$this->upload->do_upload('photo')){
-			//gagal
-			$error = array('error' => $this->upload->display_errors());
-			// var_dump($error);
-		} else{
+
+		foreach($_FILES['photo'] as $key=>$val){
+			$i = 1;
+			foreach($val as $v)
+			{
+				$field_name = "IMG_".$i;
+				$_FILES[$field_name][$key] = $v;
+				$i++;
+			}
+		}
+
+		unset($_FILES['foto']);
+
+		// variabel error diubah, dari string menjadi array
+		$error = array();
+		$success = array();
+		$i = 0;
+		$t = (int) time();
+		foreach($_FILES as $field_name => $file){
+			$config['file_name']		= "IMG_".($t + $i );
+			$this->upload->initialize($config);
+		if ( ! $this->upload->do_upload($field_name)){
+			$error[] = $this->upload->display_errors();
+		}else{
+			$success[] = $this->upload->data();
 			$data['galeri_file'] = $config['file_name'].$this->upload->data('file_ext');
 			$data['galeri_kategori'] = 0;
-			$this->ModelGaleri->insert($data);
-			redirect('admin/galeriAll/Success');
+						$this->ModelGaleri->insert($data);
 		}
+		$i++;
+		}
+		redirect('admin/galeriAll/Success');
+		
 	}
-
+	
 	public function addVideo(){
 		// var_dump($this->input->post());
 		$data = $this->input->post();
@@ -183,19 +255,32 @@ class Admin extends CI_Controller {
 		}
 	}
 
+	public function deleteGaleri($id){
+		$this->ModelGaleri->delete($id);
+		redirect('admin/galeriAll');
+	}
+
 	public function risetAll()
 	{
-        $data['all'] = $this->ModelRiset->selectAll()->result_array();		
-		$this->load->view('admin/layouts/header',$this->head);
-		$this->load->view('admin/risetAll',$data);
-		$this->load->view('admin/layouts/footer');
+        if(isset($_SESSION['logged_in'])){
+			$data['all'] = $this->ModelRiset->selectAll()->result_array();		
+			$this->load->view('admin/layouts/header',$this->head);
+			$this->load->view('admin/risetAll',$data);
+			$this->load->view('admin/layouts/footer');
+		}else{
+			redirect('admin/login/unauth');
+		}
 	}
 
 	public function risetPost()
 	{
-		$this->load->view('admin/layouts/header',$this->head);
-		$this->load->view('admin/risetPost');
-		$this->load->view('admin/layouts/footer');
+		if(isset($_SESSION['logged_in'])){
+			$this->load->view('admin/layouts/header',$this->head);
+			$this->load->view('admin/risetPost');
+			$this->load->view('admin/layouts/footer');
+		}else{
+			redirect('admin/login/unauth');
+		}
 	}
 
 	public function addRiset(){
@@ -223,27 +308,49 @@ class Admin extends CI_Controller {
 		}
 	}
 
+	public function deleteRiset($id){
+		$this->ModelRiset->delete($id);
+		redirect('admin/risetAll');
+	}
+
 	public function pesanAll()
 	{
-        $data['all'] = $this->ModelKontak->selectAll()->result_array();		
-		$this->load->view('admin/layouts/header',$this->head);
-		$this->load->view('admin/pesanAll',$data);
-		$this->load->view('admin/layouts/footer');
+        if(isset($_SESSION['logged_in'])){
+			$data['all'] = $this->ModelKontak->selectAll()->result_array();		
+			$this->load->view('admin/layouts/header',$this->head);
+			$this->load->view('admin/pesanAll',$data);
+			$this->load->view('admin/layouts/footer');
+		}else{
+			redirect('admin/login/unauth');
+		}
+	}
+
+	public function deletePesan($id){
+		$this->ModelKontak->delete($id);
+		redirect('admin/pesanAll');
 	}
 
 	public function agendaAll()
 	{
-        $data['all'] = $this->ModelAgenda->selectAll()->result_array();		
-		$this->load->view('admin/layouts/header',$this->head);
-		$this->load->view('admin/agendaAll',$data);
-		$this->load->view('admin/layouts/footer');
+        if(isset($_SESSION['logged_in'])){
+			$data['all'] = $this->ModelAgenda->selectAll()->result_array();		
+			$this->load->view('admin/layouts/header',$this->head);
+			$this->load->view('admin/agendaAll',$data);
+			$this->load->view('admin/layouts/footer');
+		}else{
+			redirect('admin/login/unauth');
+		}
 	}
 
 	public function agendaPost()
 	{
-		$this->load->view('admin/layouts/header',$this->head);
-		$this->load->view('admin/agendaPost');
-		$this->load->view('admin/layouts/footer');
+		if(isset($_SESSION['logged_in'])){
+			$this->load->view('admin/layouts/header',$this->head);
+			$this->load->view('admin/agendaPost');
+			$this->load->view('admin/layouts/footer');
+		}else{
+			redirect('admin/login/unauth');
+		}
 	}
 
 	public function addAgenda(){
@@ -254,19 +361,32 @@ class Admin extends CI_Controller {
 		redirect('admin/agendaAll/Success');
 	}
 
+	public function deleteAgenda($id){
+		$this->ModelAgenda->delete($id);
+		redirect('admin/agendaAll');
+	}
+
 	public function prestasiAll()
 	{
-        $data['all'] = $this->ModelPrestasi->selectAll()->result_array();		
-		$this->load->view('admin/layouts/header',$this->head);
-		$this->load->view('admin/prestasiAll',$data);
-		$this->load->view('admin/layouts/footer');
+        if(isset($_SESSION['logged_in'])){
+			$data['all'] = $this->ModelPrestasi->selectAll()->result_array();		
+			$this->load->view('admin/layouts/header',$this->head);
+			$this->load->view('admin/prestasiAll',$data);
+			$this->load->view('admin/layouts/footer');
+		}else{
+			redirect('admin/login/unauth');
+		}
 	}
 
 	public function prestasiPost()
 	{
-		$this->load->view('admin/layouts/header',$this->head);
-		$this->load->view('admin/prestasiPost');
-		$this->load->view('admin/layouts/footer');
+		if(isset($_SESSION['logged_in'])){
+			$this->load->view('admin/layouts/header',$this->head);
+			$this->load->view('admin/prestasiPost');
+			$this->load->view('admin/layouts/footer');
+		}else{
+			redirect('admin/login/unauth');
+		}
 	}
 
 	public function addPrestasi(){
@@ -283,14 +403,22 @@ class Admin extends CI_Controller {
 		$config['file_name']		= "PRESTASI_".time();
 		$this->load->library('upload', $config);
 		var_dump($_FILES);
+
 		if(!$this->upload->do_upload('file')){
 			//gagal
-			$error = array('error' => $this->upload->display_errors());
+			//$error = array('error' => $this->upload->display_errors());
+			$data['prestasi_foto'] = "default.jpg";
 			// var_dump($error);
 		} else{
 			$data['prestasi_foto'] = $config['file_name'].$this->upload->data('file_ext');
-			$this->ModelPrestasi->insert($data);
-			redirect('admin/prestasiAll/Success');
 		}
+
+		$this->ModelPrestasi->insert($data);
+		redirect('admin/prestasiAll/Success');
+	}
+
+	public function deletePrestasi($id){
+		$this->ModelPrestasi->delete($id);
+		redirect('admin/prestasiAll');
 	}
 }

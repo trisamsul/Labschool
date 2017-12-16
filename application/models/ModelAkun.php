@@ -46,4 +46,9 @@ class ModelAkun extends CI_Model {
 		return $this->db->update($this->tableName);
 	}
 
+	public function delete($id){
+		$this->db->where('id',$id);
+		$this->db->delete($this->tableName);
+	}
+
 }

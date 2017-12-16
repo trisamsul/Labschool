@@ -239,7 +239,7 @@
                             </li>
                             <li class="col-md-4">
                                 <div class="thumb">
-                                    <center><img src="<?php echo base_url(); ?>assets/img/labschool/pimpinan/blank.png" alt="" style="width:150px;" class="img-circle img-responsive"/></center>
+                                    <center><img src="<?php echo base_url(); ?>assets/img/labschool/pimpinan/sma-bumsil-kes.jpg" alt="" style="width:150px;" class="img-circle img-responsive"/></center>
                                 </div>
                                 <h3>Dudi Mulyadi, S.Pd. </h3>
                                 <h5>Wakil Kepala Sekolah Bidang Kesiswaan</h5>
@@ -253,7 +253,7 @@
                             </li>
                             <li class="col-md-4">
                                 <div class="thumb">
-                                    <center><img src="<?php echo base_url(); ?>assets/img/labschool/pimpinan/blank.png" alt="" style="width:150px;" class="img-circle img-responsive"/></center>
+                                    <center><img src="<?php echo base_url(); ?>assets/img/labschool/pimpinan/sma-bumsil-sar.jpg" alt="" style="width:150px;" class="img-circle img-responsive"/></center>
                                 </div>
                                 <h3>Fajar Amufatullah, S.Pd. </h3>
                                 <h5>Wakil Kepala Sekolah Bidang Sarana dan Prasarana</h5>

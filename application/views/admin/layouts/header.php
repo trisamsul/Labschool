@@ -45,9 +45,9 @@
     <!-- Logo -->
     <a href="#" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>L</b>P2</span>
+      <span class="logo-mini"><b>Lab</b></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"> LP2IT</span>
+      <span class="logo-lg"> Labschool UPI</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -77,10 +77,10 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="<?php echo base_url('Admin/changePass'); ?>" class="btn btn-default btn-flat"><i class="fa fa-user"></i> Ganti Password</a>
+                  <a href="<?php echo base_url('admin/gantiPassword'); ?>" class="btn btn-default btn-flat"><i class="fa fa-user"></i> Ganti Password</a>
                 </div>
                 <div class="pull-right">
-                  <a href="<?php echo base_url(); ?>Admin/logOut/" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i> Keluar</a>
+                  <a href="<?php echo base_url(); ?>admin/logOut/" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i> Keluar</a>
                 </div>
               </li>
             </ul>
@@ -152,11 +152,11 @@
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>admin/galeriAll"><i class="fa fa-th"></i> Semua Foto & Video<span class="pull-right-container">
+            <li><a href="<?php echo base_url(); ?>admin/galeriAll"><i class="fa fa-th"></i> Semua Galeri<span class="pull-right-container">
               <span class="label label-warning pull-right"><?php echo $galeri; ?></span>
             </span></a></li>
             <li><a href="<?php echo base_url(); ?>admin/galeriPostImg"><i class="fa fa-edit"></i> Unggah Foto</a></li>
-            <li><a href="<?php echo base_url(); ?>admin/galeriPostVid"><i class="fa fa-edit"></i> Unggah Video</a></li>
+            <!-- <li><a href="<?php echo base_url(); ?>admin/galeriPostVid"><i class="fa fa-edit"></i> Unggah Video</a></li> -->
           </ul>
         </li>
         <li class="treeview">

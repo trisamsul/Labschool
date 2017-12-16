@@ -58,7 +58,7 @@
                     <td><?php echo $row['galeri_caption']; ?></td>
                     <td>
                       <button type="button" class="btn btn-sm bg-orange"><i class="fa fa-edit"></i></button>
-                      <button type="button" class="btn btn-sm bg-red"><i class="fa fa-times"></i></button>
+                      <button type="button" class="btn btn-sm bg-red" onclick="location.href='<?php echo base_url();?>admin/deleteGaleri/<?php echo $row['galeri_id'] ?>'"><i class="fa fa-times"></i></button>
                     </td>
                 </tr>
                 <?php } ?>

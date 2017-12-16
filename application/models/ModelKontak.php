@@ -17,7 +17,7 @@ class ModelKontak extends CI_Model {
         $this->db->limit($from,$offset);
 
         return $this->db->get();
-    }
+    }    
 
     public function selectById($id){
         $this->db->select('*');
@@ -36,5 +36,10 @@ class ModelKontak extends CI_Model {
         $this->db->where('id',$id);
         return $this->db->update($this->tableName);
     }
+
+    public function delete($id){
+		$this->db->where('kontak_id',$id);
+		$this->db->delete($this->tableName);
+	}
 
 }

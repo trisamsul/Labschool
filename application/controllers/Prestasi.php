@@ -27,8 +27,28 @@ class Prestasi extends CI_Controller {
 		$this->load->view('layouts/footer');
     }
     
-    public function tahun($year){
-		$data['all'] = $this->ModelPrestasi->selectByYear($year)->result_array();
+    public function tahun($year,$sekolah){
+		if($sekolah == 'TKBS'){
+			$skl = "TK Bumi Siliwangi";
+		}else if($sekolah == 'TKKC'){
+			$skl = "TK Kampus Cibiru";
+		}else if($sekolah == 'SDBS'){
+			$skl = "SD Bumi Siliwangi";
+		}else if($sekolah == 'SDKC'){
+			$skl = "SD Kampus Cibiru";
+		}else if($sekolah == 'SDKT'){
+			$skl = "SD Kampus Tasikmalaya";
+		}else if($sekolah == 'SDKS'){
+			$skl = "SD Kampus Serang";
+		}else if($sekolah == 'SMPBS'){
+			$skl = "SMP Bumi Siliwangi";
+		}else if($sekolah == 'SMPKC'){
+			$skl = "SMP Kampus Cibiru";
+		}else if($sekolah == 'SMABS'){
+			$skl = "SMA Bumi Siliwangi";
+		}
+
+		$data['all'] = $this->ModelPrestasi->selectByYear($year,$skl)->result_array();
         $data['prestasi'] = $this->ModelPrestasi->selectYear()->result_array();
 		$this->load->view('layouts/header',$data);
 		$this->load->view('prestasi',$data);

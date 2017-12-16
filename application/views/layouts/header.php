@@ -33,12 +33,31 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
+<style>
+  @media screen and (max-width:462px) {
+    .top {text-align: center;}.top ul.list-inline{float: none !important;text-align: center;}
+    .hero_content {padding: 80px 0;}
+    .hero_content h1 {font-size: 32px;}
+    .hero_content h2 {width: 90%;font-size: 21px;}
+    /*.boxes_area .row {margin-left: -20px;margin-right: -20px;}*/
+    .boxes_area .box p {margin-bottom: 30px;}
+    .services .media .media-left {padding-right: 15px;}
+    
+    .category-content .media-body {float: left;position: relative;width: 100%;}
+    .category-content .media-body h3 {margin-top: 20px;}
+    .category-main .meta {position: relative;width: 100%;}
+    .category-main .meta .pull-left {margin-left: 40px;}
+    .category-main .meta .pull-right {display: none;}
+    
+    .sidebar {margin-top: 40px;}
+}
+</style>
 <body class="body-wrapper">
 
   <div class="main_wrapper">
 
     <header class="header-wrapper">
-    <div class="topbar clearfix">
+      <div class="topbar clearfix top container-fluid">
         <div class="container">
           <ul class="topbar-left">
             <li class="phoneNo"><i class="fa fa-phone"></i>022-2013342</li>
@@ -123,7 +142,7 @@
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Prestasi</a>
                           <ul class="dropdown-menu">
                             <?php foreach($prestasi as $row){ ?>
-                                <li><a href="<?php echo site_url(); ?>prestasi/tahun/<?php echo $row['prestasi_tahun']; ?>" title="">Tahun <?php echo $row['prestasi_tahun']; ?></a></li>
+                                <li><a href="<?php echo site_url(); ?>prestasi/tahun/<?php echo $row['prestasi_tahun']; ?>/TKBS" title="">Tahun <?php echo $row['prestasi_tahun']; ?></a></li>
                             <?php } ?>
                           </ul>
                         </li>
@@ -133,13 +152,18 @@
                       <li class="">
                           <a href="<?php echo base_url(); ?>riset" >Riset</a>
                         </li>
-                      <li class=" dropdown">
+					  <li class="">
+                          <a href="<?php echo base_url(); ?>galeriFoto" >Galeri</a>
+                        </li>
+                      <!--
+					  <li class=" dropdown">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Galeri</a>
                           <ul class="dropdown-menu">
                             <li><a href="<?php echo base_url(); ?>galeriFoto">Foto</a></li>
                             <li><a href="<?php echo base_url(); ?>galeriVideo">Video</a></li>
                           </ul>
                         </li>
+						-->
                     </ul>
                   </div><!-- navbar-collapse -->
 

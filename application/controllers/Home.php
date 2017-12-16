@@ -74,6 +74,16 @@ class Home extends CI_Controller {
 		$this->load->view('galeriFoto',$data);
 		$this->load->view('layouts/footer');
 	}
+
+	public function galeriFotoCaption($id){
+		$temp = $this->ModelGaleri->selectById($id)->row_array();
+
+		$data['galeri'] = $this->ModelGaleri->selectByCaption($temp['galeri_caption'])->result_array();
+		$data['prestasi'] = $this->ModelPrestasi->selectYear()->result_array();
+		$this->load->view('layouts/header',$data);
+		$this->load->view('galeriFotoCaption',$data);
+		$this->load->view('layouts/footer');		
+	}
 	
 	public function galeriVideo()
 	{

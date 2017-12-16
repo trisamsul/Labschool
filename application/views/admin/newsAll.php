@@ -46,9 +46,8 @@
                     <td><?php echo $row['berita_tanggal']; ?></td>
                     <td><a href="<?php echo base_url(); ?>uploads/berita/<?php echo $row['berita_foto']; ?>" target="_blank">Foto</a></td>
                     <td>
-                      <button type="button" class="btn btn-sm bg-navy"><i class="fa fa-eye-slash"></i></button>
                       <button type="button" class="btn btn-sm bg-orange"><i class="fa fa-edit"></i></button>
-                      <button type="button" class="btn btn-sm bg-red"><i class="fa fa-times"></i></button>
+                      <button type="button" class="btn btn-sm bg-red" onclick="location.href='<?php echo base_url();?>admin/deleteBerita/<?php echo $row['berita_id'] ?>'"><i class="fa fa-times"></i></button>
                     </td>
                 </tr>
                 <?php } ?>

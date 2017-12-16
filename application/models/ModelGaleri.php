@@ -29,12 +29,23 @@ class ModelGaleri extends CI_Model {
     
     public function selectImages(){
 		$this->db->select('*');
+		$this->db->group_by('galeri_caption');
 		$this->db->from($this->tableName);
+		
 		$this->db->where('galeri_kategori',0);
 		$this->db->order_by('galeri_id','DESC');
 
 		return $this->db->get();
-    }
+	}
+	
+    public function selectByCaption($capt){
+		$this->db->select('*');
+		$this->db->from($this->tableName);
+		$this->db->where('galeri_caption',$capt);
+		$this->db->order_by('galeri_id','DESC');
+
+		return $this->db->get();    
+	}
     
     public function selectVideos(){
 		$this->db->select('*');
@@ -53,6 +64,11 @@ class ModelGaleri extends CI_Model {
 		$this->db->set($data);
 		$this->db->where('galeri_id',$id);
 		return $this->db->update($this->tableName);
+	}
+
+	public function delete($id){
+		$this->db->where('galeri_id',$id);
+		$this->db->delete($this->tableName);
 	}
 
 }

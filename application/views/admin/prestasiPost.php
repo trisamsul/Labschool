@@ -68,8 +68,7 @@
                 </div>
             </div>
             <div class="box-footer clearfix">
-              <button type="submit" class="pull-right btn btn-default" id="sendEmail">Upload
-                <i class="fa fa-arrow-circle-right"></i></button>
+              <button type="submit" class="pull-right btn btn-default" id="sendEmail">Upload<i class="fa fa-arrow-circle-right"></i></button>
             </div>
             </form>
           </div>

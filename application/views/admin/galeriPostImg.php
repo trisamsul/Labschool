@@ -26,7 +26,7 @@
                 </div>
                 <div class="form-group">
                   <label>File foto : </label>
-                  <input type="file" name="photo" placeholder="" required>
+                  <input type="file" name="photo[]" multiple required>
                 </div>
             </div>
             <div class="box-footer clearfix">

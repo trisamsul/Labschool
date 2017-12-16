@@ -53,7 +53,7 @@
                     <td><a href="<?php echo base_url(); ?>uploads/riset/videos/<?php echo $row['riset_video']; ?>" target="_blank"><?php echo $row['riset_video']; ?></a></td>
                     <td>
                       <button type="button" class="btn btn-sm bg-orange"><i class="fa fa-edit"></i></button>
-                      <button type="button" class="btn btn-sm bg-red"><i class="fa fa-times"></i></button>
+                      <button type="button" class="btn btn-sm bg-red" onclick="location.href='<?php echo base_url();?>admin/deletePesan/<?php echo $row['riset_id'] ?>'"><i class="fa fa-times"></i></button>
                     </td>
                 </tr>
                 <?php } ?>

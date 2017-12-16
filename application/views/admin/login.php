@@ -48,7 +48,15 @@
     <div class="alert alert-danger" role="alert">
       Maaf username/password yang anda masukkan salah.
     </div>
-    <?php } ?>
+    <?php }elseif($this->uri->segment(3) == "unauth"){ ?>
+	  <div class="alert alert-danger" role="alert">
+      Silahkan login terlebih dahulu.
+    </div>
+	  <?php }elseif($this->uri->segment(3) == "change"){ ?>
+	  <div class="alert alert-success" role="alert">
+      Password berhasil diganti. Silahkan masuk menggunakan password baru.
+    </div>
+	  <?php }	?>
     <form action="<?php echo base_url(); ?>Admin/auth" method="post">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" placeholder="Username" name="uname">

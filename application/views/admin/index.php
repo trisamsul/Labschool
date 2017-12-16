@@ -93,7 +93,7 @@
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>5</h3>
+              <h3><?php echo $pesan;?></h3>
 
               <p>Pesan Masuk</p>
             </div>
