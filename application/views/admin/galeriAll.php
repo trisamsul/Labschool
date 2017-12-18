@@ -14,9 +14,17 @@
   <!-- Main content -->
     <section class="content">
       <?php if ($this->uri->segment(3) == "Success"){ ?>
-      <div class="alert alert-success" role="alert">
-        Foto atau video Berhasil diposting, silahkan cek pada daftar dibawah ini.
-      </div>
+        <div class="alert alert-success" role="alert">
+          Foto atau video Berhasil diposting, silahkan cek pada daftar dibawah ini.
+        </div>
+      <?php }else if($this->uri->segment(3) == "Update"){ ?>
+        <div class="alert alert-success" role="alert">
+          Foto atau video Berhasil diedit, silahkan cek pada daftar dibawah ini.
+        </div>
+      <?php }else if($this->uri->segment(3) == "Delete"){ ?>
+        <div class="alert alert-danger" role="alert">
+          Foto atau video telah dihapus, silahkan cek pada daftar dibawah ini.
+        </div>
       <?php } ?>
       <div class="row">
         <div class="col-xs-12">
@@ -57,7 +65,6 @@
                     <td><a href="<?php echo base_url(); ?>uploads/galeri/<?php echo $path; ?>/<?php echo $row['galeri_file']; ?>" target="_blank"><?php echo $row['galeri_file']; ?></a></td>
                     <td><?php echo $row['galeri_caption']; ?></td>
                     <td>
-                      <button type="button" class="btn btn-sm bg-orange"><i class="fa fa-edit"></i></button>
                       <button type="button" class="btn btn-sm bg-red" onclick="location.href='<?php echo base_url();?>admin/deleteGaleri/<?php echo $row['galeri_id'] ?>'"><i class="fa fa-times"></i></button>
                     </td>
                 </tr>

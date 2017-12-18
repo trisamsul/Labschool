@@ -14,9 +14,17 @@
   <!-- Main content -->
     <section class="content">
       <?php if ($this->uri->segment(3) == "Success"){ ?>
-      <div class="alert alert-success" role="alert">
-        Prestasi berhasil diposting, silahkan cek pada daftar Prestasi dibawah ini.
-      </div>
+        <div class="alert alert-success" role="alert">
+          Prestasi berhasil diposting, silahkan cek pada daftar Prestasi dibawah ini.
+        </div>
+      <?php }else if($this->uri->segment(3) == "Update"){ ?>
+        <div class="alert alert-success" role="alert">
+          Prestasi berhasil diedit, silahkan cek pada daftar Prestasi dibawah ini.
+        </div>
+      <?php }else if($this->uri->segment(3) == "Delete"){ ?>
+        <div class="alert alert-danger" role="alert">
+          Prestasitelah dihapus, silahkan cek pada daftar Prestasi dibawah ini.
+        </div>
       <?php } ?>
       <div class="row">
         <div class="col-xs-12">
@@ -56,7 +64,7 @@
                     <td><?php echo $row['prestasi_tingkat']; ?></td>
                     <td><a href="<?php echo base_url(); ?>uploads/prestasi/<?php echo $row['prestasi_foto']; ?>" target="_blank"><?php echo $row['prestasi_foto']; ?></a></td>
                     <td>
-                      <button type="button" class="btn btn-sm bg-orange"><i class="fa fa-edit"></i></button>
+                      <button type="button" class="btn btn-sm bg-orange" onclick="location.href='<?php echo base_url();?>admin/editPrestasi/<?php echo $row['prestasi_id'] ?>'"><i class="fa fa-edit"></i></button>
                       <button type="button" class="btn btn-sm bg-red" onclick="location.href='<?php echo base_url();?>admin/deletePrestasi/<?php echo $row['prestasi_id'] ?>'"><i class="fa fa-times"></i></button>
                     </td>
                 </tr>

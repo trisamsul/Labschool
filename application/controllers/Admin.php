@@ -142,9 +142,33 @@ class Admin extends CI_Controller {
 		}
 	}
 
+	public function editNews($id = NULL){
+		if($id != NULL){
+			if(isset($_SESSION['logged_in'])){
+				$data['field'] = $this->ModelNews->selectById($id)->row_array();
+				
+				$this->load->view('admin/layouts/header',$this->head);
+				$this->load->view('admin/newsEdit',$data);
+				$this->load->view('admin/layouts/footer');
+			}else{
+				redirect('admin/login/unauth');
+			}
+		}else{
+			$data = $this->input->post();
+			
+			$id = $data['berita_id'];
+			unset($data['berita_id']);
+			unset($data['_wysihtml5_mode']);
+
+			// var_dump($data);
+			$this->ModelNews->update($id, $data);
+			redirect('admin/newsAll/Update');
+		}
+	}
+
 	public function deleteNews($id){
 		$this->ModelNews->delete($id);
-		redirect('admin/newsAll');
+		redirect('admin/newsAll/Delete');
 	}
 
 	public function galeriAll()
@@ -225,8 +249,7 @@ class Admin extends CI_Controller {
 		}
 		$i++;
 		}
-		redirect('admin/galeriAll/Success');
-		
+		redirect('admin/galeriAll/Success');		
 	}
 	
 	public function addVideo(){
@@ -257,7 +280,7 @@ class Admin extends CI_Controller {
 
 	public function deleteGaleri($id){
 		$this->ModelGaleri->delete($id);
-		redirect('admin/galeriAll');
+		redirect('admin/galeriAll/Delete');
 	}
 
 	public function risetAll()
@@ -308,9 +331,33 @@ class Admin extends CI_Controller {
 		}
 	}
 
+	public function editRiset($id = NULL){
+		if($id != NULL){
+			if(isset($_SESSION['logged_in'])){
+				$data['field'] = $this->ModelRiset->selectById($id)->row_array();
+				
+				$this->load->view('admin/layouts/header',$this->head);
+				$this->load->view('admin/risetEdit',$data);
+				$this->load->view('admin/layouts/footer');
+			}else{
+				redirect('admin/login/unauth');
+			}
+		}else{
+			$data = $this->input->post();
+			
+			$id = $data['riset_id'];
+			unset($data['riset_id']);
+			unset($data['_wysihtml5_mode']);
+
+			// var_dump($data);
+			$this->ModelRiset->update($id, $data);
+			redirect('admin/risetAll/Update');
+		}
+	}
+
 	public function deleteRiset($id){
 		$this->ModelRiset->delete($id);
-		redirect('admin/risetAll');
+		redirect('admin/risetAll/Delete');
 	}
 
 	public function pesanAll()
@@ -327,7 +374,7 @@ class Admin extends CI_Controller {
 
 	public function deletePesan($id){
 		$this->ModelKontak->delete($id);
-		redirect('admin/pesanAll');
+		redirect('admin/pesanAll/Delete');
 	}
 
 	public function agendaAll()
@@ -361,9 +408,34 @@ class Admin extends CI_Controller {
 		redirect('admin/agendaAll/Success');
 	}
 
+	public function editAgenda($id = NULL){
+		if($id != NULL){
+			if(isset($_SESSION['logged_in'])){
+				$data['field'] = $this->ModelAgenda->selectById($id)->row_array();
+				
+				$this->load->view('admin/layouts/header',$this->head);
+				$this->load->view('admin/agendaEdit',$data);
+				$this->load->view('admin/layouts/footer');
+			}else{
+				redirect('admin/login/unauth');
+			}
+		}else{
+			$data = $this->input->post();
+			var_dump($data);
+			$id = $data['agenda_id'];
+			unset($data['agenda_id']);
+			unset($data['_wysihtml5_mode']);
+
+			$data['agenda_tanggal'] = date("Y-m-d",strtotime($this->input->post('agenda_tanggal')));
+			// var_dump($insert);
+			$this->ModelAgenda->update($id, $data);
+			redirect('admin/agendaAll/Update');
+		}
+	}
+
 	public function deleteAgenda($id){
 		$this->ModelAgenda->delete($id);
-		redirect('admin/agendaAll');
+		redirect('admin/agendaAll/Delete');
 	}
 
 	public function prestasiAll()
@@ -417,8 +489,32 @@ class Admin extends CI_Controller {
 		redirect('admin/prestasiAll/Success');
 	}
 
+	public function editPrestasi($id = NULL){
+		if($id != NULL){
+			if(isset($_SESSION['logged_in'])){
+				$data['field'] = $this->ModelPrestasi->selectById($id)->row_array();
+				
+				$this->load->view('admin/layouts/header',$this->head);
+				$this->load->view('admin/prestasiEdit',$data);
+				$this->load->view('admin/layouts/footer');
+			}else{
+				redirect('admin/login/unauth');
+			}
+		}else{
+			$data = $this->input->post();
+			
+			$id = $data['prestasi_id'];
+			unset($data['prestasi_id']);
+			unset($data['_wysihtml5_mode']);
+
+			// var_dump($data);
+			$this->ModelPrestasi->update($id, $data);
+			redirect('admin/prestasiAll/Update');
+		}
+	}
+
 	public function deletePrestasi($id){
 		$this->ModelPrestasi->delete($id);
-		redirect('admin/prestasiAll');
+		redirect('admin/prestasiAll/Delete');
 	}
 }

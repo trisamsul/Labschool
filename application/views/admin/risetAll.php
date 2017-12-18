@@ -14,9 +14,17 @@
   <!-- Main content -->
     <section class="content">
       <?php if ($this->uri->segment(3) == "Success"){ ?>
-      <div class="alert alert-success" role="alert">
-        Riset berhasil diposting, silahkan cek pada daftar riset dibawah ini.
-      </div>
+        <div class="alert alert-success" role="alert">
+          Riset berhasil diposting, silahkan cek pada daftar riset dibawah ini.
+        </div>
+      <?php }else if($this->uri->segment(3) == "Update"){ ?>
+        <div class="alert alert-success" role="alert">
+          Riset berhasil diedit, silahkan cek pada daftar riset dibawah ini.
+        </div>
+      <?php }else if($this->uri->segment(3) == "Delete"){ ?>
+        <div class="alert alert-danger" role="alert">
+          Riset telah dihapus, silahkan cek pada daftar riset dibawah ini.
+        </div>
       <?php } ?>
       <div class="row">
         <div class="col-xs-12">
@@ -35,7 +43,6 @@
                     <th>Bidang</th>
                     <th>Tahun</th>
                     <th>File</th>
-                    <th>Video</th>
                     <th>Aksi</th>
                 </tr>
                 </thead>
@@ -50,10 +57,9 @@
                     <td><?php echo $row['riset_bidang']; ?></td>
                     <td><?php echo $row['riset_tahun']; ?></td>
                     <td><a href="<?php echo base_url(); ?>uploads/riset/files/<?php echo $row['riset_file']; ?>" target="_blank"><?php echo $row['riset_file']; ?></a></td>
-                    <td><a href="<?php echo base_url(); ?>uploads/riset/videos/<?php echo $row['riset_video']; ?>" target="_blank"><?php echo $row['riset_video']; ?></a></td>
                     <td>
-                      <button type="button" class="btn btn-sm bg-orange"><i class="fa fa-edit"></i></button>
-                      <button type="button" class="btn btn-sm bg-red" onclick="location.href='<?php echo base_url();?>admin/deletePesan/<?php echo $row['riset_id'] ?>'"><i class="fa fa-times"></i></button>
+                      <button type="button" class="btn btn-sm bg-orange" onclick="location.href='<?php echo base_url();?>admin/editRiset/<?php echo $row['riset_id'] ?>'"><i class="fa fa-edit"></i></button>
+                      <button type="button" class="btn btn-sm bg-red" onclick="location.href='<?php echo base_url();?>admin/deleteRiset/<?php echo $row['riset_id'] ?>'"><i class="fa fa-times"></i></button>
                     </td>
                 </tr>
                 <?php } ?>
@@ -66,7 +72,6 @@
                     <th>Bidang</th>
                     <th>Tahun</th>
                     <th>File</th>
-                    <th>Video</th>
                     <th>Aksi</th>
                 </tr>
                 </tfoot>
